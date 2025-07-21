@@ -3,3 +3,8 @@
 @import "./base/common";
 @import "./vendors/mixin";
 @import "./vendors/extend";
+@import "./components/link";
+@import "./layout/navbar";
+@import "./pages/home/intro";
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap');

@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -50,4 +51,81 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+body {
+  background-color: #F5F5ED;
+  color: rgb(17, 17, 17);
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(17, 17, 17);
+  font-size: 18px;
+}
+a:hover {
+  color: rgb(41, 66, 51);
+}
+
+nav {
+  border-bottom: 1px solid rgb(230, 233, 208);
+  background-color: #F5F5ED;
+}
+nav .navbar {
+  padding: 20px;
+  position: sticky;
+}
+nav .navbar .logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+nav .navbar .logo img {
+  width: 166px;
+  height: 36px;
+}
+nav .navbar .nav-list ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 40px;
+}
+nav .navbar .nav-list ul li {
+  list-style: none;
+}
+nav .navbar .user-panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+nav .navbar .user-panel .cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: rgb(230, 233, 208);
+}
+
+.first .intro__contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.first .intro__contents__head {
+  font-size: 40px;
+  font-family: "Unbounded", sans-serif;
 }/*# sourceMappingURL=style.css.map */

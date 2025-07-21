@@ -1,0 +1,37 @@
+nav {
+    border-bottom: 1px solid map-get($colors, light-green-two);
+    background-color: map-get($colors, light-green-one);
+    .navbar {
+        padding: 20px;
+        position: sticky;
+
+        .logo {
+            @include flex(row, flex-start, center, nowrap, null);
+            img {
+                width: 166px;
+                height: 36px;
+            }
+        }
+
+        .nav-list {
+            ul {
+                @include flex(row, center, center, nowrap, 40px);
+
+                li {
+                    list-style: none;
+                }
+            }
+        }
+
+        .user-panel {
+            @include flex(row, flex-end, center, nowrap, 20px);
+
+            .cart {
+                @include flex(row, center, center, nowrap, 10px);
+                padding: 10px;
+                border-radius: 20px;
+                background-color: map-get($colors, light-green-two);
+            }
+        }
+    }
+}

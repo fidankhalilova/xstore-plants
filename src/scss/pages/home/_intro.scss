@@ -1,0 +1,11 @@
+.first {
+    .intro {
+    &__contents {
+        @include flex(column, center, center, nowrap, null);
+        &__head {
+            font-size: map-get($font-size, font-xl);
+            font-family: $head-font;
+        }
+    }
+}
+}
