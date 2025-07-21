@@ -1,0 +1,66 @@
+.third {
+    padding: 40px 0;
+
+    .before-and-after {
+        @include flex(column, center, center, null, 20px);
+
+        .sub-head {
+            h2 {
+                font-size: map-get($font-size, font-xl);
+                font-family: $head-font;
+                font-weight: 500;
+            }
+        }
+
+        .transition {
+            .before-after {
+                z-index: -2;
+                .before {
+                    position: relative;
+                    bottom: 0;
+                    left: 0;
+                    
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                    }
+
+                    &:hover {
+                        visibility: visible;
+                        opacity: 1;
+                        transition: opacity 0.3s linear;
+                    }
+                }
+
+                .after {
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                    }
+                    &:hover {
+                        visibility: visible;
+                        opacity: 0;
+                        transition: opacity 0.3s linear;
+                    }
+                }
+            }
+            .bef-aft-text {
+                @include flex(row, space-between, center, null, null);
+                position: relative;
+                bottom: 0;
+                left: 0;
+                z-index: 4;
+                h3 {
+                    font-size: map-get($font-size, font-lg);
+                    padding: 10px 20px;
+                    background-color: map-get($colors, white);
+                }
+            }
+        }
+    }
+}

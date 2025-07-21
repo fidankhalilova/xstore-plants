@@ -1,12 +1,19 @@
-nav {
+.desktop_nav {
+    display: block;
     border-bottom: 1px solid map-get($colors, light-green-two);
     background-color: map-get($colors, light-green-one);
+
+    @media (max-width: 1000px) {
+        display: none;
+    }
+
     .navbar {
         padding: 20px;
         position: sticky;
 
         .logo {
             @include flex(row, flex-start, center, nowrap, null);
+
             img {
                 width: 166px;
                 height: 36px;
@@ -19,6 +26,14 @@ nav {
 
                 li {
                     list-style: none;
+
+                    a {
+                        &:hover {
+                            color: map-get($colors, green);
+                            text-decoration: underline 2px map-get($colors, green);
+                            transition: text-decoration 0.5s ease-in-out;
+                        }
+                    }
                 }
             }
         }
@@ -33,5 +48,20 @@ nav {
                 background-color: map-get($colors, light-green-two);
             }
         }
+    }
+}
+
+.mobile_nav {
+    display: none;
+    border-bottom: 1px solid map-get($colors, light-green-two);
+    background-color: map-get($colors, light-green-one);
+
+    @media (max-width: 1000px) {
+        padding: 20px 10px;
+        display: block;
+    }
+
+    .item {
+        @include flex(row, space-between, center, null, null);
     }
 }

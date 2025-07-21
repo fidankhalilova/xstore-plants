@@ -1,0 +1,130 @@
+.second {
+    padding-top: 80px;
+    padding-bottom: 40px;
+
+    .popular-posts {
+        @include flex(column, center, center, null, 40px);
+
+        .sub-head {
+            h2 {
+                font-size: map-get($font-size, font-xl);
+            }
+        }
+
+        .popular-cats {
+            ul {
+                @include flex(row, center, center, wrap, 40px);
+
+                @media (max-width: 1000px) {
+                    @include flex(column, center, center, wrap, 30px);
+                }
+
+                li {
+                    list-style: none;
+
+                    a {
+                        font-size: map-get($font-size, font-lg);
+                        color: gray;
+
+                        &:hover {
+                            color: map-get($colors, black);
+                            text-decoration: underline 2px map-get($colors, black);
+                            transition: text-decoration 0.5s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+
+        .post-row {
+            @include flex(row, center, center, null, 40px);
+
+            @media (max-width: 1000px) {
+                @include flex(null, center, center, wrap, 40px);
+            }
+
+            .one-post {
+                @include flex(column, center, flex-start, null, 26px);
+
+                .post-img {
+                    img {
+                        width: 280px;
+                        height: 330px;
+                        object-fit: cover;
+                    }
+                }
+
+                .post-details {
+                    @include flex(column, center, flex-start, null, 20px);
+
+                    h2 {
+                        font-size: map-get($font-size, font-md);
+                        font-family: $head-font;
+                    }
+
+                    .product-price {
+                        @include flex(row, flex-start, center, null, 15px);
+
+                        #earlier {
+                            color: map-get($colors, gray);
+                            font-size: map-get($font-size, font-md);
+                        }
+
+                        #now {
+                            color: map-get($colors, green);
+                            font-size: map-get($font-size, font-md);
+                        }
+                    }
+
+                    .product-colors {
+                        @include flex(row, flex-start, center, null, 20px);
+
+                        .color {
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 100%;
+                            padding: 5px;
+                            background-color: map-get($colors, green);
+                        }
+                    }
+
+                    .prod-size {
+                        @include flex(row, flex-start, center, null, 10px);
+
+                        h4 {
+                            font-size: map-get($font-size, font-xs);
+                            padding: 7px;
+                            border-radius: 20px;
+                            border: 1px solid map-get($colors, black);
+                            font-weight: 300;
+                            &:hover {
+                                background-color: map-get($colors, green);
+                                color: map-get($colors, white);
+                                border: 1px solid map-get($colors, green);
+                            }
+                        }
+                    }
+
+                    .add-to-cart {
+                        @include flex(row, center, center, null, 20px);
+                        align-self: stretch;
+
+                        button {
+                            padding: 20px;
+                            background-color: map-get($colors, light-green-one);
+                            border: 1px solid map-get($colors, green);
+                            border-radius: 40px;
+                            width: 100%;
+
+                            &:hover {
+                                background-color: map-get($colors, green);
+                                color: map-get($colors, white);
+                                border: 1px solid map-get($colors, green);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
