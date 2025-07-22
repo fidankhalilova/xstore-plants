@@ -68,17 +68,256 @@ a:hover {
   color: rgb(41, 66, 51);
 }
 
-button {
+.btn {
   padding: 20px;
   background-color: #F5F5ED;
   border: 1px solid rgb(41, 66, 51);
   border-radius: 40px;
   width: 200px;
 }
-button:hover {
+.btn:hover {
   background-color: rgb(41, 66, 51);
   color: white;
   border: 1px solid rgb(41, 66, 51);
+}
+
+.action-btn {
+  padding: 5px;
+  background-color: white;
+  border: none;
+  font-size: 24px;
+}
+.action-btn:hover {
+  cursor: pointer;
+  background-color: gray;
+  transition: 0.5s ease-in-out;
+}
+
+.one-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+.one-post .post-img {
+  position: relative;
+}
+.one-post .post-img .main-img {
+  width: 280px;
+  height: 280px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.one-post .post-img .hover-img, .one-post .post-img:hover .hover-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.one-post .post-img .hover-img .hover {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+}
+.one-post .post-img .hover-img .icon {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 2;
+}
+.one-post .post-img .hover-img .icon button {
+  width: 40px;
+}
+.one-post .post-img:hover .hover-img {
+  opacity: 1;
+}
+.one-post .post-img .offcanvas-body {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.one-post .post-img .offcanvas-body .carousel-item img {
+  height: 415px;
+  width: 360px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.one-post .post-img .offcanvas-body h1 {
+  font-size: 24px;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+}
+.one-post .post-img .offcanvas-body h4 {
+  color: rgb(41, 66, 51);
+  font-size: 18px;
+}
+.one-post .post-img .offcanvas-body p {
+  font-weight: 300;
+  line-height: 26px;
+}
+.one-post .post-img .offcanvas-body .product-colors {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.one-post .post-img .offcanvas-body .product-colors .color {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  padding: 5px;
+  background-color: rgb(41, 66, 51);
+}
+.one-post .post-img .offcanvas-body .prod-size {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.one-post .post-img .offcanvas-body .prod-size h4 {
+  font-size: 12px;
+  padding: 7px;
+  border-radius: 20px;
+  border: 1px solid rgb(17, 17, 17);
+  font-weight: 300;
+}
+.one-post .post-img .offcanvas-body .prod-size h4:hover {
+  background-color: rgb(41, 66, 51);
+  color: white;
+  border: 1px solid rgb(41, 66, 51);
+}
+.one-post .post-img .offcanvas-body .in-stock {
+  font-size: 18px;
+  color: 1px solid rgb(41, 66, 51);
+}
+.one-post .post-img .offcanvas-body .add-to-cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+}
+.one-post .post-img .offcanvas-body .add-to-cart .add-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgb(17, 17, 17);
+}
+.one-post .post-img .offcanvas-body .add-to-cart .add-items p {
+  padding: 5px;
+  width: 20px;
+  border: 1px solid rgb(17, 17, 17);
+  font-size: 18px;
+}
+.one-post .post-img .offcanvas-body .add-to-cart .add-items p:hover {
+  cursor: pointer;
+}
+.one-post .post-img .offcanvas-body .add-to-cart .add-items input {
+  border: none;
+  padding: 5px;
+  width: 20px;
+}
+.one-post .post-img .offcanvas-body .add-to-cart .add-items input::-moz-placeholder {
+  text-align: center;
+}
+.one-post .post-img .offcanvas-body .add-to-cart .add-items input::placeholder {
+  text-align: center;
+}
+.one-post .post-img .offcanvas-body .add-to-cart .full-btn {
+  width: 100%;
+}
+.one-post .post-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 14px;
+}
+.one-post .post-details h2 {
+  font-size: 18px;
+  font-family: "Unbounded", sans-serif;
+}
+.one-post .post-details .product-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+.one-post .post-details .product-price #earlier {
+  color: gray;
+  font-size: 18px;
+}
+.one-post .post-details .product-price #now {
+  color: rgb(41, 66, 51);
+  font-size: 18px;
+}
+.one-post .post-details .product-colors {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.one-post .post-details .product-colors .color {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  padding: 5px;
+  background-color: rgb(41, 66, 51);
+}
+.one-post .post-details .prod-size {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.one-post .post-details .prod-size h4 {
+  font-size: 12px;
+  padding: 7px;
+  border-radius: 20px;
+  border: 1px solid rgb(17, 17, 17);
+  font-weight: 300;
+}
+.one-post .post-details .prod-size h4:hover {
+  background-color: rgb(41, 66, 51);
+  color: white;
+  border: 1px solid rgb(41, 66, 51);
+}
+.one-post .post-details .add-to-cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+}
+.one-post .post-details .add-to-cart .full-btn {
+  width: 100%;
 }
 
 .desktop_nav {
@@ -635,87 +874,4 @@ button:hover {
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 40px;
-}
-.fifth .deal-of-the-month .products .posts-deals .one-post {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
-}
-.fifth .deal-of-the-month .products .posts-deals .one-post .post-img img {
-  width: 280px;
-  height: 280px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.fifth .deal-of-the-month .products .posts-deals .one-post .post-details {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 14px;
-}
-.fifth .deal-of-the-month .products .posts-deals .one-post .post-details h2 {
-  font-size: 18px;
-  font-family: "Unbounded", sans-serif;
-}
-.fifth .deal-of-the-month .products .posts-deals .one-post .post-details .product-price {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 15px;
-}
-.fifth .deal-of-the-month .products .posts-deals .one-post .post-details .product-price #earlier {
-  color: gray;
-  font-size: 18px;
-}
-.fifth .deal-of-the-month .products .posts-deals .one-post .post-details .product-price #now {
-  color: rgb(41, 66, 51);
-  font-size: 18px;
-}
-.fifth .deal-of-the-month .products .posts-deals .one-post .post-details .product-colors {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 20px;
-}
-.fifth .deal-of-the-month .products .posts-deals .one-post .post-details .product-colors .color {
-  width: 20px;
-  height: 20px;
-  border-radius: 100%;
-  padding: 5px;
-  background-color: rgb(41, 66, 51);
-}
-.fifth .deal-of-the-month .products .posts-deals .one-post .post-details .prod-size {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 10px;
-}
-.fifth .deal-of-the-month .products .posts-deals .one-post .post-details .prod-size h4 {
-  font-size: 12px;
-  padding: 7px;
-  border-radius: 20px;
-  border: 1px solid rgb(17, 17, 17);
-  font-weight: 300;
-}
-.fifth .deal-of-the-month .products .posts-deals .one-post .post-details .prod-size h4:hover {
-  background-color: rgb(41, 66, 51);
-  color: white;
-  border: 1px solid rgb(41, 66, 51);
-}
-.fifth .deal-of-the-month .products .posts-deals .one-post .post-details .add-to-cart {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  align-self: stretch;
-}
-.fifth .deal-of-the-month .products .posts-deals .one-post .post-details .add-to-cart button {
-  width: 100%;
 }/*# sourceMappingURL=style.css.map */

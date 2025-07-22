@@ -1,0 +1,216 @@
+.one-post {
+    @include flex(column, center, flex-start, null, 20px);
+
+    .post-img {
+        position: relative;
+
+        .main-img {
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hover-img {
+            @include flex(column, center, center, null, null);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+
+            .hover {
+                position: relative;
+                width: 280px;
+                height: 280px;
+                object-fit: cover;
+                z-index: 1;
+            }
+
+            .icon {
+                @include flex(column, null, null, nowrap, 0px);
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                z-index: 2;
+
+                button {
+                    width: 40px;
+                }
+            }
+        }
+
+        &:hover {
+            .hover-img {
+                @extend .hover-img;
+                opacity: 1;
+            }
+        }
+
+        .offcanvas-body {
+            @include flex(column, null, null, null, 30px);
+
+            .carousel-item {
+                img {
+                    height: 415px;
+                    width: 360px;
+                    object-fit: cover;
+                }
+            }
+
+            h1 {
+                font-size: map-get($font-size, font-lg);
+                font-family: $head-font;
+                font-weight: 500;
+            }
+
+            h4 {
+                color: map-get($colors, green);
+                font-size: map-get($font-size, font-md);
+            }
+
+            p {
+                font-weight: 300;
+                line-height: 26px;
+            }
+
+            .product-colors {
+                @include flex(row, flex-start, center, null, 20px);
+
+                .color {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 100%;
+                    padding: 5px;
+                    background-color: map-get($colors, green);
+                }
+            }
+
+            .prod-size {
+                @include flex(row, flex-start, center, null, 10px);
+
+                h4 {
+                    font-size: map-get($font-size, font-xs);
+                    padding: 7px;
+                    border-radius: 20px;
+                    border: 1px solid map-get($colors, black);
+                    font-weight: 300;
+
+                    &:hover {
+                        background-color: map-get($colors, green);
+                        color: map-get($colors, white);
+                        border: 1px solid map-get($colors, green);
+                    }
+                }
+            }
+
+            .in-stock {
+                font-size: map-get($font-size, font-md);
+                color: 1px solid map-get($colors, green);
+            }
+
+            .add-to-cart {
+                @include flex(row, center, center, null, 20px);
+                align-self: stretch;
+
+                .add-items {
+                    @include flex(row, center, center, null, 10px);
+                    border: 1px solid map-get($colors, black);
+
+                    p {
+                        padding: 5px;
+                        width: 20px;
+                        border: 1px solid map-get($colors, black);
+                        font-size: map-get($font-size, font-md);
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+
+                    input {
+                        border: none;
+                        padding: 5px;
+                        // border-top: 1px solid map-get($colors, black);
+                        // border-bottom: 1px solid map-get($colors, black);
+                        width: 20px;
+
+                        &::placeholder {
+                            text-align: center;
+                        }
+                    }
+                }
+
+                .full-btn {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .post-details {
+        @include flex(column, center, flex-start, null, 14px);
+
+        h2 {
+            font-size: map-get($font-size, font-md);
+            font-family: $head-font;
+        }
+
+        .product-price {
+            @include flex(row, flex-start, center, null, 15px);
+
+            #earlier {
+                color: map-get($colors, gray);
+                font-size: map-get($font-size, font-md);
+            }
+
+            #now {
+                color: map-get($colors, green);
+                font-size: map-get($font-size, font-md);
+            }
+        }
+
+        .product-colors {
+            @include flex(row, flex-start, center, null, 20px);
+
+            .color {
+                width: 20px;
+                height: 20px;
+                border-radius: 100%;
+                padding: 5px;
+                background-color: map-get($colors, green);
+            }
+        }
+
+        .prod-size {
+            @include flex(row, flex-start, center, null, 10px);
+
+            h4 {
+                font-size: map-get($font-size, font-xs);
+                padding: 7px;
+                border-radius: 20px;
+                border: 1px solid map-get($colors, black);
+                font-weight: 300;
+
+                &:hover {
+                    background-color: map-get($colors, green);
+                    color: map-get($colors, white);
+                    border: 1px solid map-get($colors, green);
+                }
+            }
+        }
+
+        .add-to-cart {
+            @include flex(row, center, center, null, 20px);
+            align-self: stretch;
+
+            .full-btn {
+                width: 100%;
+            }
+        }
+    }
+}

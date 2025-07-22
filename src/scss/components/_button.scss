@@ -1,4 +1,4 @@
-button {
+.btn {
     padding: 20px;
     background-color: map-get($colors, light-green-one);
     border: 1px solid map-get($colors, green);
@@ -9,5 +9,18 @@ button {
         background-color: map-get($colors, green);
         color: map-get($colors, white);
         border: 1px solid map-get($colors, green);
+    }
+}
+
+.action-btn {
+    padding: 5px;
+    background-color: map-get($colors, white);
+    border: none;
+    font-size: map-get($font-size, font-lg);
+
+    &:hover {
+        cursor: pointer;
+        background-color: map-get($colors, gray);
+        transition: 0.5s ease-in-out;
     }
 }
