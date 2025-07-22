@@ -68,6 +68,19 @@ a:hover {
   color: rgb(41, 66, 51);
 }
 
+button {
+  padding: 20px;
+  background-color: #F5F5ED;
+  border: 1px solid rgb(41, 66, 51);
+  border-radius: 40px;
+  width: 200px;
+}
+button:hover {
+  background-color: rgb(41, 66, 51);
+  color: white;
+  border: 1px solid rgb(41, 66, 51);
+}
+
 .desktop_nav {
   display: block;
   border-bottom: 1px solid rgb(230, 233, 208);
@@ -216,16 +229,7 @@ a:hover {
   line-height: 26px;
 }
 .first .intro .introo .intro__contents .intro__desc .intro__desc__btn button {
-  padding: 20px 50px;
-  background-color: rgb(41, 66, 51);
-  color: white;
-  border: 1px solid rgb(41, 66, 51);
-  border-radius: 40px;
-}
-.first .intro .introo .intro__contents .intro__desc .intro__desc__btn button:hover {
-  background-color: #F5F5ED;
-  color: rgb(17, 17, 17);
-  border: 1px solid rgb(41, 66, 51);
+  width: 100%;
 }
 .first .intro .introo .intro__contents .intro__stats {
   display: flex;
@@ -274,8 +278,8 @@ a:hover {
 }
 
 .second {
-  padding-top: 80px;
-  padding-bottom: 40px;
+  padding-top: 100px;
+  padding-bottom: 60px;
 }
 .second .popular-posts {
   display: flex;
@@ -327,7 +331,7 @@ a:hover {
   align-items: center;
   gap: 40px;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .second .popular-posts .post-row {
     display: flex;
     justify-content: center;
@@ -417,78 +421,301 @@ a:hover {
   align-self: stretch;
 }
 .second .popular-posts .post-row .one-post .post-details .add-to-cart button {
-  padding: 20px;
-  background-color: #F5F5ED;
-  border: 1px solid rgb(41, 66, 51);
-  border-radius: 40px;
   width: 100%;
-}
-.second .popular-posts .post-row .one-post .post-details .add-to-cart button:hover {
-  background-color: rgb(41, 66, 51);
-  color: white;
-  border: 1px solid rgb(41, 66, 51);
 }
 
 .third {
-  padding: 40px 0;
+  padding: 100px 0;
 }
 .third .before-and-after {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
 }
 .third .before-and-after .sub-head h2 {
   font-size: 40px;
   font-family: "Unbounded", sans-serif;
   font-weight: 500;
 }
-.third .before-and-after .transition .before-after {
-  z-index: -2;
-}
-.third .before-and-after .transition .before-after .before {
-  position: relative;
-  bottom: 0;
-  left: 0;
-}
-.third .before-and-after .transition .before-after .before img {
+.third .before-and-after .img-container {
   width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
-.third .before-and-after .transition .before-after .before:hover {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 0.3s linear;
-}
-.third .before-and-after .transition .before-after .after {
-  position: relative;
-}
-.third .before-and-after .transition .before-after .after img {
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.third .before-and-after .transition .before-after .after:hover {
-  visibility: visible;
-  opacity: 0;
-  transition: opacity 0.3s linear;
-}
-.third .before-and-after .transition .bef-aft-text {
+.third .before-and-after .img-container .carousel-caption {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
+}
+.third .before-and-after .img-container .carousel-caption h5 {
+  font-size: 24px;
+  padding: 15px 20px;
+  background-color: white;
+  color: rgb(17, 17, 17);
+  border-radius: 20px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.forth {
+  margin: 100px 0;
+}
+.forth .last-products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.forth .last-products .sub-head h2 {
+  font-size: 40px;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+  text-align: center;
+}
+.forth .last-products .img-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 40px;
+}
+@media (max-width: 1200px) {
+  .forth .last-products .img-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+}
+.forth .last-products .img-row .img-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.forth .last-products .img-row .img-post .p-image {
   position: relative;
+}
+.forth .last-products .img-row .img-post .p-image .image {
+  width: 450px;
+  height: 450px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+@media (max-width: 1200px) {
+  .forth .last-products .img-row .img-post .p-image .image {
+    width: 300px;
+    height: 300px;
+  }
+}
+.forth .last-products .img-row .img-post .p-image .overlay-one, .forth .last-products .img-row .img-post .p-image:hover .overlay-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 4;
+  right: 0;
+  background-color: rgb(230, 233, 208);
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: 0.5s ease-in-out;
 }
-.third .before-and-after .transition .bef-aft-text h3 {
+.forth .last-products .img-row .img-post .p-image .overlay-two, .forth .last-products .img-row .img-post .p-image:hover .overlay-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(230, 233, 208);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease-in-out;
+}
+.forth .last-products .img-row .img-post .p-image .overlay-three, .forth .last-products .img-row .img-post .p-image:hover .overlay-three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background-color: rgb(230, 233, 208);
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: 0.5s ease-in-out;
+}
+.forth .last-products .img-row .img-post .p-image:hover .overlay-one {
+  width: 100%;
+}
+.forth .last-products .img-row .img-post .p-image:hover .overlay-two {
+  height: 100%;
+}
+.forth .last-products .img-row .img-post .p-image:hover .overlay-three {
+  width: 100%;
+  left: 0;
+}
+.forth .last-products .img-row .img-post h3 {
   font-size: 24px;
-  padding: 10px 20px;
-  background-color: white;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.8px;
+}
+.forth .last-products .img-row .img-post p {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 24px;
+  letter-spacing: 0.8px;
+}
+
+.fifth {
+  margin: 100px 0;
+}
+.fifth .deal-of-the-month {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.fifth .deal-of-the-month .sub-head h2 {
+  font-size: 40px;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+  text-align: center;
+}
+.fifth .deal-of-the-month .products .main-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.fifth .deal-of-the-month .products .main-product .image-full {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.fifth .deal-of-the-month .products .main-product h3 {
+  font-size: 24px;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.8px;
+}
+.fifth .deal-of-the-month .products .main-product p {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 24px;
+  letter-spacing: 0.8px;
+}
+.fifth .deal-of-the-month .products .main-product button {
+  width: 100%;
+}
+.fifth .deal-of-the-month .products .posts-deals {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.fifth .deal-of-the-month .products .posts-deals .one-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+.fifth .deal-of-the-month .products .posts-deals .one-post .post-img img {
+  width: 280px;
+  height: 280px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.fifth .deal-of-the-month .products .posts-deals .one-post .post-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 14px;
+}
+.fifth .deal-of-the-month .products .posts-deals .one-post .post-details h2 {
+  font-size: 18px;
+  font-family: "Unbounded", sans-serif;
+}
+.fifth .deal-of-the-month .products .posts-deals .one-post .post-details .product-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+.fifth .deal-of-the-month .products .posts-deals .one-post .post-details .product-price #earlier {
+  color: gray;
+  font-size: 18px;
+}
+.fifth .deal-of-the-month .products .posts-deals .one-post .post-details .product-price #now {
+  color: rgb(41, 66, 51);
+  font-size: 18px;
+}
+.fifth .deal-of-the-month .products .posts-deals .one-post .post-details .product-colors {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.fifth .deal-of-the-month .products .posts-deals .one-post .post-details .product-colors .color {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  padding: 5px;
+  background-color: rgb(41, 66, 51);
+}
+.fifth .deal-of-the-month .products .posts-deals .one-post .post-details .prod-size {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.fifth .deal-of-the-month .products .posts-deals .one-post .post-details .prod-size h4 {
+  font-size: 12px;
+  padding: 7px;
+  border-radius: 20px;
+  border: 1px solid rgb(17, 17, 17);
+  font-weight: 300;
+}
+.fifth .deal-of-the-month .products .posts-deals .one-post .post-details .prod-size h4:hover {
+  background-color: rgb(41, 66, 51);
+  color: white;
+  border: 1px solid rgb(41, 66, 51);
+}
+.fifth .deal-of-the-month .products .posts-deals .one-post .post-details .add-to-cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+}
+.fifth .deal-of-the-month .products .posts-deals .one-post .post-details .add-to-cart button {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

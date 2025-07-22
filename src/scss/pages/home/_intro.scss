@@ -41,17 +41,7 @@
                         }
 
                         button {
-                            padding: 20px 50px;
-                            background-color: map-get($colors, green);
-                            color: map-get($colors, white);
-                            border: 1px solid map-get($colors, green);
-                            border-radius: 40px;
-
-                            &:hover {
-                                background-color: map-get($colors, light-green-one);
-                                color: map-get($colors, black);
-                                border: 1px solid map-get($colors, green);
-                            }
+                            width: 100%;
                         }
                     }
                 }

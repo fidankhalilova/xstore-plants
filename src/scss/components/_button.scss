@@ -1,0 +1,13 @@
+button {
+    padding: 20px;
+    background-color: map-get($colors, light-green-one);
+    border: 1px solid map-get($colors, green);
+    border-radius: 40px;
+    width: 200px;
+
+    &:hover {
+        background-color: map-get($colors, green);
+        color: map-get($colors, white);
+        border: 1px solid map-get($colors, green);
+    }
+}

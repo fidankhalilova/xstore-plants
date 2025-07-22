@@ -1,0 +1,124 @@
+.fifth {
+    margin: 100px 0;
+
+    .deal-of-the-month {
+        @include flex(row, center, center, wrap, 40px);
+
+        .sub-head {
+            h2 {
+                font-size: map-get($font-size, font-xl);
+                font-family: $head-font;
+                font-weight: 500;
+                text-align: center;
+            }
+        }
+
+        .products {
+            .main-product {
+                @include flex(column, null, center, null, 30px);
+
+                .image-full {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                h3 {
+                    font-size: map-get($font-size, font-lg);
+                    font-family: $head-font;
+                    font-weight: 500;
+                    text-align: center;
+                    letter-spacing: 0.8px;
+                }
+
+                p {
+                    font-size: map-get($font-size, font-md);
+                    font-weight: 300;
+                    text-align: center;
+                    line-height: 24px;
+                    letter-spacing: 0.8px;
+                }
+                button {
+                    width: 100%;
+                }
+            }
+
+            .posts-deals {
+                @include flex(row, center, flex-start, wrap, 40px);
+                .one-post {
+                    @include flex(column, center, flex-start, null, 20px);
+
+                    .post-img {
+                        img {
+                            width: 280px;
+                            height: 280px;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .post-details {
+                        @include flex(column, center, flex-start, null, 14px);
+
+                        h2 {
+                            font-size: map-get($font-size, font-md);
+                            font-family: $head-font;
+                        }
+
+                        .product-price {
+                            @include flex(row, flex-start, center, null, 15px);
+
+                            #earlier {
+                                color: map-get($colors, gray);
+                                font-size: map-get($font-size, font-md);
+                            }
+
+                            #now {
+                                color: map-get($colors, green);
+                                font-size: map-get($font-size, font-md);
+                            }
+                        }
+
+                        .product-colors {
+                            @include flex(row, flex-start, center, null, 20px);
+
+                            .color {
+                                width: 20px;
+                                height: 20px;
+                                border-radius: 100%;
+                                padding: 5px;
+                                background-color: map-get($colors, green);
+                            }
+                        }
+
+                        .prod-size {
+                            @include flex(row, flex-start, center, null, 10px);
+
+                            h4 {
+                                font-size: map-get($font-size, font-xs);
+                                padding: 7px;
+                                border-radius: 20px;
+                                border: 1px solid map-get($colors, black);
+                                font-weight: 300;
+
+                                &:hover {
+                                    background-color: map-get($colors, green);
+                                    color: map-get($colors, white);
+                                    border: 1px solid map-get($colors, green);
+                                }
+                            }
+                        }
+
+                        .add-to-cart {
+                            @include flex(row, center, center, null, 20px);
+                            align-self: stretch;
+
+                            button {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

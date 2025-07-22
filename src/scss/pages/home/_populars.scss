@@ -1,6 +1,6 @@
 .second {
-    padding-top: 80px;
-    padding-bottom: 40px;
+    padding-top: 100px;
+    padding-bottom: 60px;
 
     .popular-posts {
         @include flex(column, center, center, null, 40px);
@@ -39,7 +39,7 @@
         .post-row {
             @include flex(row, center, center, null, 40px);
 
-            @media (max-width: 1000px) {
+            @media (max-width: 1200px) {
                 @include flex(null, center, center, wrap, 40px);
             }
 
@@ -110,17 +110,7 @@
                         align-self: stretch;
 
                         button {
-                            padding: 20px;
-                            background-color: map-get($colors, light-green-one);
-                            border: 1px solid map-get($colors, green);
-                            border-radius: 40px;
                             width: 100%;
-
-                            &:hover {
-                                background-color: map-get($colors, green);
-                                color: map-get($colors, white);
-                                border: 1px solid map-get($colors, green);
-                            }
                         }
                     }
                 }
