@@ -149,6 +149,46 @@
                     width: 100%;
                 }
             }
+
+            .detail-list {
+                span {
+                    color: map-get($colors, gray);
+                }
+            }
+
+            i {
+                color: map-get($colors, black);
+
+                &:hover {
+                    color: map-get($colors, green);
+                }
+            }
+
+            .accordion {
+                .accordion-body {
+                    @include flex(column, null, null, null, 20px);
+
+                    p {
+                        color: map-get($colors, black);
+                    }
+
+                    h2 {
+                        font-size: map-get($font-size, font-lg);
+                        font-family: $head-font;
+                        font-weight: 500;
+                    }
+
+                    img {
+                        width: 300px;
+                        height: auto;
+                    }
+                }
+
+                .accordion-button {
+                    background-color: map-get($colors, white);
+                    color: map-get($colors, green); 
+                }
+            }
         }
     }
 
