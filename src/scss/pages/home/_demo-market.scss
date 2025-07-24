@@ -2,6 +2,9 @@
     margin: 40px 0;
     .demo-store {
         @include flex(row, center, center, null, 60px);
+        @media (max-width: 1200px) {
+            @include flex(row, center, center, wrap, 60px);
+        }
         .demo-text {
             @include flex(column, null, null, nowrap, 40px);
 

@@ -70,8 +70,10 @@
             }
 
             .photo-slide {
+                
                 .carousel-item {
                     height: 750px;
+                    overflow: hidden;
                     @media (max-width: 1000px) {
                         height: 375px;
                         width: 100%;
