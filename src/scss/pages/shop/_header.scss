@@ -1,0 +1,32 @@
+.one {
+    .back-img {
+        overflow: hidden;
+        position: relative;
+        img {
+            width: 100vw;
+            object-fit: cover;
+        }
+        .back-img-text {
+            @include flex(column, center, center, null, 10px);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            h1 {
+                font-family: $head-font;
+                font-size: map-get($font-size, font-xl);
+                color: map-get($colors, white);
+                font-weight: 500;
+                @media (max-width: 1000px) {
+                    font-size: map-get($font-size, font-lg);
+                }
+            }
+            p {
+                color: map-get($colors, white);
+                a {
+                    color: map-get($colors, white);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+a {
+    text-decoration: none;
+    color: map-get($colors, black);
+    font-size: map-get($font-size, font-md);
+    &:hover {
+        color: map-get($colors, green);
+    }
+}

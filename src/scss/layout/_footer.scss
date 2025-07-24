@@ -1,0 +1,141 @@
+footer {
+    .line {
+        margin-top: 40px;
+        background-color: map-get($colors, light-green-two);
+        padding: 25px;
+
+        .label-line {
+            @include flex(row, space-between, center, null, null);
+
+            p {
+                color: map-get($colors, green);
+                font-size: map-get($font-size, font-md);
+            }
+
+            svg {
+                fill: map-get($colors, green);
+            }
+        }
+    }
+
+    .other-links {
+        background-color: map-get($colors, green);
+        border-bottom: 1px solid map-get($colors, light-green-one);
+        padding: 100px 0;
+
+        .assos-links {
+            @include flex(row, space-between, flex-start, nowrap, null);
+
+            @media (max-width: 1200px) {
+                @include flex(column, flex-start, flex-start, null, 60px);
+            }
+
+            .link-list {
+                @include flex(column, null, null, null, 20px);
+
+                h2 {
+                    color: map-get($colors, light-green-one);
+                    font-size: map-get($font-size, font-lg);
+                    font-family: $head-font;
+                    font-weight: 500;
+
+                    a {
+                        color: map-get($colors, light-green-one);
+                        font-size: map-get($font-size, font-lg);
+                        font-family: $head-font;
+                        font-weight: 500;
+                    }
+                }
+
+                p {
+                    color: map-get($colors, light-green-one);
+                    font-size: map-get($font-size, font-md);
+                    line-height: 26px;
+
+                    a {
+                        color: map-get($colors, light-green-one);
+                        font-size: map-get($font-size, font-md);
+                    }
+                }
+
+                .email-input {
+                    border-bottom: 1.5px solid map-get($colors, light-green-two);
+                    @include flex(row, space-between, center, null, null);
+
+                    input {
+                        border: none;
+                        background-color: map-get($colors, green);
+                        padding: 20px;
+                        color: map-get($colors, light-green-one);
+
+                        &:focus {
+                            outline: none;
+                            border: none;
+                        }
+
+                        &::placeholder {
+                            font-size: map-get($font-size, font-md);
+                            color: map-get($colors, light-green-one);
+                        }
+                    }
+
+                    i {
+                        color: map-get($colors, light-green-two);
+                        font-size: map-get($font-size, font-lg);
+                    }
+                }
+
+                .link-icons {
+                    @include flex(row, null, center, null, 15px);
+
+                    i {
+                        color: map-get($colors, light-green-two);
+                        font-size: map-get($font-size, font-lg);
+                    }
+                }
+            }
+        }
+    }
+
+    .policy {
+        background-color: map-get($colors, green);
+        padding: 25px;
+
+        .policy-line {
+            @include flex(row, space-between, center, nowrap, null);
+
+            @media (max-width: 1200px) {
+                @include flex(column, center, center, null, 60px);
+            }
+
+            .last-line {
+                @include flex(row, null, null, null, 3px);
+
+                @media (max-width: 1200px) {
+                    @include flex(row, center, flex-start, wrap, 10px);
+                    text-align: center;
+                }
+
+                p {
+                    color: map-get($colors, light-green-one);
+                    font-size: map-get($font-size, font-md);
+                }
+
+                a {
+                    color: map-get($colors, light-green-one);
+                    font-size: map-get($font-size, font-md);
+                }
+            }
+
+            .payment {
+                @include flex(row, null, null, null, 10px);
+
+                img {
+                    width: 396px;
+                    height: 54px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
