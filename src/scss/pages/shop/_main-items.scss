@@ -1,0 +1,87 @@
+.two {
+    margin: 100px 0;
+
+    .main-items {
+        @include flex(row, space-between, flex-start, null, null);
+
+        .filters {
+            h1 {
+                font-size: map-get($font-size, font-xl);
+            }
+        }
+
+        .items {
+            @include flex(column, center, space-between, nowrap, 40px);
+
+            .item-show {
+                @include flex(row, space-between, center, wrap, null);
+
+                .drop-down {
+                    @include flex(row, center, center, wrap, 10px);
+
+                    label {
+                        color: map-get($colors, green);
+                        font-size: map-get($font-size, font-lg);
+                        font-weight: 300;
+                    }
+
+                    .select {
+                        padding: 10px;
+                        border: 1px solid map-get($colors, green);
+                        background-color: map-get($colors, white);
+
+                        select {
+                            border: none;
+                            width: 100px;
+
+                            &::selection {
+                                font-size: map-get($font-size, font-md);
+                                color: map-get($colors, gray);
+                                background-color: map-get($colors, white);
+
+                            }
+
+                            &:focus {
+                                border: none;
+                            }
+                        }
+                    }
+                }
+
+                .list-options {
+                    @include flex(row, center, center, null, 10px);
+
+                    .select {
+                        padding: 10px;
+                        border: 1px solid map-get($colors, green);
+                        background-color: map-get($colors, white);
+
+                        i {
+                            font-size: map-get($font-size, font-lg);
+                        }
+
+                        select {
+                            border: none;
+                            width: 300px;
+
+                            &::selection {
+                                font-size: map-get($font-size, font-md);
+                                color: map-get($colors, gray);
+                                background-color: map-get($colors, white);
+
+                            }
+
+                            &:focus {
+                                border: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .item-conts {
+                @include flex(row, space-between, center, wrap, 40px);
+            }
+        }
+    }
+}

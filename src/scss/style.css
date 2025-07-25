@@ -629,4 +629,107 @@ a:hover {
 }
 .one .back-img .back-img-text p a {
   color: white;
+}
+
+.two {
+  margin: 100px 0;
+}
+.two .main-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.two .main-items .filters h1 {
+  font-size: 40px;
+}
+.two .main-items .items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+  flex-wrap: nowrap;
+  gap: 40px;
+}
+.two .main-items .items .item-show {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.two .main-items .items .item-show .drop-down {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.two .main-items .items .item-show .drop-down label {
+  color: rgb(41, 66, 51);
+  font-size: 24px;
+  font-weight: 300;
+}
+.two .main-items .items .item-show .drop-down .select {
+  padding: 10px;
+  border: 1px solid rgb(41, 66, 51);
+  background-color: white;
+}
+.two .main-items .items .item-show .drop-down .select select {
+  border: none;
+  width: 100px;
+}
+.two .main-items .items .item-show .drop-down .select select::-moz-selection {
+  font-size: 18px;
+  color: gray;
+  background-color: white;
+}
+.two .main-items .items .item-show .drop-down .select select::selection {
+  font-size: 18px;
+  color: gray;
+  background-color: white;
+}
+.two .main-items .items .item-show .drop-down .select select:focus {
+  border: none;
+}
+.two .main-items .items .item-show .list-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.two .main-items .items .item-show .list-options .select {
+  padding: 10px;
+  border: 1px solid rgb(41, 66, 51);
+  background-color: white;
+}
+.two .main-items .items .item-show .list-options .select i {
+  font-size: 24px;
+}
+.two .main-items .items .item-show .list-options .select select {
+  border: none;
+  width: 300px;
+}
+.two .main-items .items .item-show .list-options .select select::-moz-selection {
+  font-size: 18px;
+  color: gray;
+  background-color: white;
+}
+.two .main-items .items .item-show .list-options .select select::selection {
+  font-size: 18px;
+  color: gray;
+  background-color: white;
+}
+.two .main-items .items .item-show .list-options .select select:focus {
+  border: none;
+}
+.two .main-items .items .item-conts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
 }/*# sourceMappingURL=style.css.map */
