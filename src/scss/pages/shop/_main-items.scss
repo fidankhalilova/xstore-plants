@@ -1,11 +1,23 @@
 .two {
     margin: 100px 0;
 
+    @media (max-width: 1000px) {
+        margin: 60px 0;
+    }
+
     .main-items {
         @include flex(row, space-between, flex-start, null, 60px);
 
-        .filters {
+        @media (max-width: 1000px) {
+            @include flex(column, center, null, nowrap, 30px);
+        }
+
+        .filters-desktop {
             @include flex(column, null, null, null, 20px);
+
+            @media (max-width: 1000px) {
+                display: none;
+            }
 
             h1 {
                 font-size: map-get($font-size, font-xl);
@@ -27,7 +39,7 @@
                     background-color: map-get($colors, white);
                     border: 1px solid map-get($colors, gray);
                     border-radius: 20px;
-                    
+
 
                     input {
                         border: none;
@@ -69,6 +81,7 @@
                             border: 1px solid map-get($colors, gray);
                             border-radius: 10px;
                             overflow: hidden;
+
                             input {
                                 width: 60px;
                                 border: none;
@@ -80,11 +93,21 @@
                             font-size: map-get($font-size, font-md);
                         }
                     }
+
                     button {
                         width: 180px;
                     }
                 }
             }
+        }
+
+        .filters-mobile {
+            display: none;
+
+            // @media (max-width: 1000px) {
+            //     @include flex(row, flex-start, center, nowrap, null);
+            //     font-size: map-get($font-size, font-lg);
+            // }
         }
 
         .items {
@@ -93,6 +116,10 @@
             .item-show {
                 @include flex(row, space-between, center, wrap, null);
 
+                @media (max-width: 1000px) {
+                    @include flex(row, space-between, center, nowrap, 30px);
+                }
+
                 .drop-down {
                     @include flex(row, center, center, wrap, 10px);
 
@@ -100,6 +127,10 @@
                         color: map-get($colors, green);
                         font-size: map-get($font-size, font-lg);
                         font-weight: 300;
+
+                        @media (max-width: 1000px) {
+                            font-size: map-get($font-size, font-md);
+                        }
                     }
 
                     .select {
@@ -110,6 +141,10 @@
                         select {
                             border: none;
                             width: 100px;
+
+                            @media (max-width: 1000px) {
+                                width: 50px;
+                            }
 
                             &::selection {
                                 font-size: map-get($font-size, font-md);
@@ -141,6 +176,10 @@
                             border: none;
                             width: 300px;
 
+                            @media (max-width: 1000px) {
+                                width: 100px;
+                            }
+
                             &::selection {
                                 font-size: map-get($font-size, font-md);
                                 color: map-get($colors, gray);
@@ -157,7 +196,8 @@
             }
 
             .item-conts {
-                @include flex(row, space-between, center, wrap, 40px);
+                @include flex(row, center, center, wrap, 40px);
+                
             }
         }
     }

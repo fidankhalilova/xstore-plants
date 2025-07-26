@@ -133,6 +133,7 @@ body {
   .mobile_nav {
     padding: 20px 10px;
     display: block;
+    padding: 0;
   }
 }
 .mobile_nav .item {
@@ -349,6 +350,12 @@ a:hover {
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
+}
+@media (max-width: 1000px) {
+  .one-post .post-img .main-img {
+    width: 100%;
+    height: 100%;
+  }
 }
 .one-post .post-img .hover-img, .one-post .post-img:hover .hover-img {
   display: flex;
@@ -600,6 +607,11 @@ a:hover {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (max-width: 1000px) {
+  .one .back-img img {
+    height: 250px;
+  }
+}
 .one .back-img .back-img-text {
   display: flex;
   flex-direction: column;
@@ -632,6 +644,11 @@ a:hover {
 .two {
   margin: 100px 0;
 }
+@media (max-width: 1000px) {
+  .two {
+    margin: 60px 0;
+  }
+}
 .two .main-items {
   display: flex;
   flex-direction: row;
@@ -639,15 +656,29 @@ a:hover {
   align-items: flex-start;
   gap: 60px;
 }
-.two .main-items .filters {
+@media (max-width: 1000px) {
+  .two .main-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 30px;
+  }
+}
+.two .main-items .filters-desktop {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.two .main-items .filters h1 {
+@media (max-width: 1000px) {
+  .two .main-items .filters-desktop {
+    display: none;
+  }
+}
+.two .main-items .filters-desktop h1 {
   font-size: 40px;
 }
-.two .main-items .filters .cut {
+.two .main-items .filters-desktop .cut {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -656,10 +687,10 @@ a:hover {
   border-bottom: 1px solid gray;
   padding: 40px 0;
 }
-.two .main-items .filters .cut h3 {
+.two .main-items .filters-desktop .cut h3 {
   font-size: 24px;
 }
-.two .main-items .filters .cut .search-box {
+.two .main-items .filters-desktop .cut .search-box {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -669,70 +700,73 @@ a:hover {
   border: 1px solid gray;
   border-radius: 20px;
 }
-.two .main-items .filters .cut .search-box input {
+.two .main-items .filters-desktop .cut .search-box input {
   border: none;
   padding: 10px;
   width: 250px;
 }
-.two .main-items .filters .cut .search-box input::-moz-placeholder {
+.two .main-items .filters-desktop .cut .search-box input::-moz-placeholder {
   font-size: 16px;
 }
-.two .main-items .filters .cut .search-box input::placeholder {
+.two .main-items .filters-desktop .cut .search-box input::placeholder {
   font-size: 16px;
 }
-.two .main-items .filters .cut .checkbox {
+.two .main-items .filters-desktop .cut .checkbox {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 15px;
 }
-.two .main-items .filters .cut .checkbox .check {
+.two .main-items .filters-desktop .cut .checkbox .check {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   gap: 8px;
 }
-.two .main-items .filters .cut .checkbox .check input[type=checkbox] {
+.two .main-items .filters-desktop .cut .checkbox .check input[type=checkbox] {
   border: none;
   width: 20px;
   height: 20px;
 }
-.two .main-items .filters .cut .checkbox .check label {
+.two .main-items .filters-desktop .cut .checkbox .check label {
   font-size: 18px;
 }
-.two .main-items .filters .cut .range {
+.two .main-items .filters-desktop .cut .range {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 14px;
 }
-.two .main-items .filters .cut .range .min-max {
+.two .main-items .filters-desktop .cut .range .min-max {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 5px;
 }
-.two .main-items .filters .cut .range .min-max .min,
-.two .main-items .filters .cut .range .min-max .max {
+.two .main-items .filters-desktop .cut .range .min-max .min,
+.two .main-items .filters-desktop .cut .range .min-max .max {
   border: 1px solid gray;
   border-radius: 10px;
   overflow: hidden;
 }
-.two .main-items .filters .cut .range .min-max .min input,
-.two .main-items .filters .cut .range .min-max .max input {
+.two .main-items .filters-desktop .cut .range .min-max .min input,
+.two .main-items .filters-desktop .cut .range .min-max .max input {
   width: 60px;
   border: none;
   padding: 8px;
 }
-.two .main-items .filters .cut .range .min-max p {
+.two .main-items .filters-desktop .cut .range .min-max p {
   font-size: 18px;
 }
-.two .main-items .filters .cut .range button {
+.two .main-items .filters-desktop .cut .range button {
   width: 180px;
+}
+.two .main-items .filters-mobile {
+  display: none;
 }
 .two .main-items .items {
   display: flex;
@@ -749,6 +783,16 @@ a:hover {
   align-items: center;
   flex-wrap: wrap;
 }
+@media (max-width: 1000px) {
+  .two .main-items .items .item-show {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 30px;
+  }
+}
 .two .main-items .items .item-show .drop-down {
   display: flex;
   flex-direction: row;
@@ -762,6 +806,11 @@ a:hover {
   font-size: 24px;
   font-weight: 300;
 }
+@media (max-width: 1000px) {
+  .two .main-items .items .item-show .drop-down label {
+    font-size: 18px;
+  }
+}
 .two .main-items .items .item-show .drop-down .select {
   padding: 10px;
   border: 1px solid rgb(41, 66, 51);
@@ -770,6 +819,11 @@ a:hover {
 .two .main-items .items .item-show .drop-down .select select {
   border: none;
   width: 100px;
+}
+@media (max-width: 1000px) {
+  .two .main-items .items .item-show .drop-down .select select {
+    width: 50px;
+  }
 }
 .two .main-items .items .item-show .drop-down .select select::-moz-selection {
   font-size: 18px;
@@ -803,6 +857,11 @@ a:hover {
   border: none;
   width: 300px;
 }
+@media (max-width: 1000px) {
+  .two .main-items .items .item-show .list-options .select select {
+    width: 100px;
+  }
+}
 .two .main-items .items .item-show .list-options .select select::-moz-selection {
   font-size: 18px;
   color: gray;
@@ -819,7 +878,7 @@ a:hover {
 .two .main-items .items .item-conts {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 40px;

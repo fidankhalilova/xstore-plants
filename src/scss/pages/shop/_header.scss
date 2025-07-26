@@ -5,6 +5,9 @@
         img {
             width: 100vw;
             object-fit: cover;
+            @media (max-width: 1000px) {
+                height: 250px;
+            }
         }
         .back-img-text {
             @include flex(column, center, center, null, 10px);
