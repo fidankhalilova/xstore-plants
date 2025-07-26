@@ -4,37 +4,6 @@ footer {
         background-color: map-get($colors, light-green-two);
         padding: 25px;
 
-        .slide-left {
-            @include flex(row, space-between, center, null, null);
-            width: 100%;
-            overflow: hidden;
-
-            p {
-                color: map-get($colors, green);
-                font-size: map-get($font-size, font-md);
-                animation: slide-left infinite;
-            }
-
-            svg {
-                fill: map-get($colors, green);
-                animation: slide-left infinite;
-            }
-
-
-            @keyframes slide-left {
-                from {
-                    margin-left: 100%;
-                    width: 300%;
-                }
-
-                to {
-                    margin-left: 0%;
-                    width: 100%;
-                }
-            }
-
-        }
-
         marquee {
             p {
                 display: inline-block;

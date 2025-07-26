@@ -147,33 +147,6 @@ footer .line {
   background-color: rgb(230, 233, 208);
   padding: 25px;
 }
-footer .line .slide-left {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  overflow: hidden;
-}
-footer .line .slide-left p {
-  color: rgb(41, 66, 51);
-  font-size: 18px;
-  animation: slide-left infinite;
-}
-footer .line .slide-left svg {
-  fill: rgb(41, 66, 51);
-  animation: slide-left infinite;
-}
-@keyframes slide-left {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
 footer .line marquee p {
   display: inline-block;
   color: rgb(41, 66, 51);
