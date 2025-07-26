@@ -1,15 +1,28 @@
 .product-main {
     margin: 80px 0;
+
     .main-product {
-        @include flex(row, space-between, flex-start, null, 60px);
+        @include flex(row, space-between, flex-start, nowrap, 60px);
         padding-bottom: 60px;
         border-bottom: 1px solid map-get($colors, light-green-two);
+
+        @media (max-width: 1000px) {
+            @include flex(column, center, center, wrap, 60px);
+        }
 
         .prod-imgs {
             @include flex(row, center, center, null, 10px);
 
+            @media (max-width: 1000px) {
+                @include flex(column-reverse, center, center, nowrap, 10px);
+            }
+
             .eg-imgs {
-                @include flex(column, null, null, null, 16px);
+                @include flex(column, null, null, nowrap, 16px);
+
+                @media (max-width: 1000px) {
+                    @include flex(row, center, center, wrap, 10px);
+                }
 
                 .eg-img {
                     overflow: hidden;
@@ -18,17 +31,36 @@
                         width: 150px;
                         height: auto;
                         object-fit: cover;
+
+                        @media (max-width: 1000px) {
+                            width: 87px;
+                        }
                     }
                 }
             }
 
             .main-image {
                 overflow: hidden;
+                @include flex(column, center, center, null, null);
 
-                img {
+                .image {
                     width: 650px;
                     height: auto;
                     object-fit: cover;
+                    display: block;
+                    transition: 0.3s ease-in-out;
+
+                    @media (max-width: 1000px) {
+                        width: 380px;
+                        height: auto;
+                    }
+                }
+            }
+
+            &:hover {
+                .image {
+                    @extend .image;
+                    transform: scale(1.4);
                 }
             }
         }
@@ -180,6 +212,7 @@
 
             .socials {
                 @include flex(row, center, center, null, 15px);
+
                 i {
                     color: map-get($colors, green);
                     font-size: map-get($font-size, font-lg);

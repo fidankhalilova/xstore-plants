@@ -20,12 +20,14 @@
                 color: map-get($colors, green);
                 line-height: 36px;
                 text-align: center;
-                width: 900px;
+
+                @media (max-width: 1000px) {
+                }
             }
         }
 
         .in-box {
-            @include flex(row, center, center, null, 140px);
+            @include flex(row, center, center, wrap, 140px);
 
             .box-img {
                 overflow: hidden;
@@ -34,11 +36,17 @@
                     width: 700px;
                     height: 700px;
                     object-fit: cover;
+
+                    @media (max-width: 1000px) {
+                        width: 350px;
+                        height: 350px;
+                    }
                 }
             }
 
             .content-of-box {
                 @include flex(column, center, center, null, 40px);
+
                 h1 {
                     font-size: map-get($font-size, font-xl);
                     font-family: $head-font;
@@ -47,6 +55,7 @@
 
                 ul {
                     @include flex(column, center, flex-start, null, 9px);
+
                     li {
                         list-style: square;
                         font-size: map-get($font-size, font-md);

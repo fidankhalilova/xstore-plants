@@ -833,9 +833,20 @@ a:hover {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: nowrap;
   gap: 60px;
   padding-bottom: 60px;
   border-bottom: 1px solid rgb(230, 233, 208);
+}
+@media (max-width: 1000px) {
+  .product-main .main-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+  }
 }
 .product-main .main-product .prod-imgs {
   display: flex;
@@ -844,10 +855,31 @@ a:hover {
   align-items: center;
   gap: 10px;
 }
+@media (max-width: 1000px) {
+  .product-main .main-product .prod-imgs {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+}
 .product-main .main-product .prod-imgs .eg-imgs {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   gap: 16px;
+}
+@media (max-width: 1000px) {
+  .product-main .main-product .prod-imgs .eg-imgs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }
 .product-main .main-product .prod-imgs .eg-imgs .eg-img {
   overflow: hidden;
@@ -858,14 +890,34 @@ a:hover {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (max-width: 1000px) {
+  .product-main .main-product .prod-imgs .eg-imgs .eg-img img {
+    width: 87px;
+  }
+}
 .product-main .main-product .prod-imgs .main-image {
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.product-main .main-product .prod-imgs .main-image img {
+.product-main .main-product .prod-imgs .main-image .image {
   width: 650px;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+  display: block;
+  transition: 0.3s ease-in-out;
+}
+@media (max-width: 1000px) {
+  .product-main .main-product .prod-imgs .main-image .image {
+    width: 380px;
+    height: auto;
+  }
+}
+.product-main .main-product .prod-imgs:hover .image {
+  transform: scale(1.4);
 }
 .product-main .main-product .prod-details {
   display: flex;
@@ -1079,13 +1131,13 @@ a:hover {
   color: rgb(41, 66, 51);
   line-height: 36px;
   text-align: center;
-  width: 900px;
 }
 .more-details .more-about .in-box {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 140px;
 }
 .more-details .more-about .in-box .box-img {
@@ -1096,6 +1148,12 @@ a:hover {
   height: 700px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (max-width: 1000px) {
+  .more-details .more-about .in-box .box-img img {
+    width: 350px;
+    height: 350px;
+  }
 }
 .more-details .more-about .in-box .content-of-box {
   display: flex;
