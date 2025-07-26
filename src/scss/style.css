@@ -730,6 +730,9 @@ a:hover {
   border: none;
   padding: 8px;
 }
+.two .main-items .filters .cut .range .min-max p {
+  font-size: 18px;
+}
 .two .main-items .filters .cut .range button {
   width: 180px;
 }

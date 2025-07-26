@@ -76,7 +76,9 @@
                             }
                         }
 
-                        p {}
+                        p {
+                            font-size: map-get($font-size, font-md);
+                        }
                     }
                     button {
                         width: 180px;
