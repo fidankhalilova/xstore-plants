@@ -10,60 +10,60 @@
             }
 
             .intro__contents {
-                padding-top: 80px;
-                padding-right: 70px;
-                padding-left: 70px;
-                @include flex(column, center, null, nowrap, 50px);
+                @include flex(column, center, center, nowrap, 50px);
 
-                .intro__head {
-                    h1 {
-                        font-size: map-get($font-size, font-xl);
-                        font-family: $head-font;
-                        font-weight: 500;
-                        line-height: 48px;
-                    }
-                }
-
-                .intro__desc {
-                    @include flex(row, null, center, nowrap, 60px);
-
-                    @media (max-width: 1000px) {
-                        @include flex(column, flex-start, center, wrap, 60px);
-                    }
-
-                    .intro__desc__btn {
-                        @include flex(column, center, center, nowrap, 40px);
-
-                        p {
-                            font-weight: 300;
-                            line-height: 26px;
-
-                        }
-
-                        button {
-                            width: 100%;
-                        }
-                    }
-                }
-
-                .intro__stats {
-                    @include flex(row, flex-start, null, null, 40px);
-
-                    @media (max-width: 1000px) {
-                        @include flex(row, center, null, null, 40px);
-                    }
-
-                    .stat {
-                        @include flex(column, flex-start, null, null, 20px);
-
-                        h3 {
-                            font-weight: 500;
+                .intro-inner {
+                    @include flex(column, center, null, nowrap, 50px);
+                    .intro__head {
+                        h1 {
+                            font-size: map-get($font-size, font-xl);
                             font-family: $head-font;
-                            font-size: map-get($font-size, font-lg);
+                            font-weight: 500;
+                            line-height: 48px;
+                        }
+                    }
+
+                    .intro__desc {
+                        @include flex(row, null, center, nowrap, 60px);
+
+                        @media (max-width: 1000px) {
+                            @include flex(column, flex-start, center, wrap, 60px);
                         }
 
-                        p {
-                            font-weight: 300;
+                        .intro__desc__btn {
+                            @include flex(column, center, center, nowrap, 40px);
+
+                            p {
+                                font-weight: 300;
+                                line-height: 26px;
+
+                            }
+
+                            button {
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    .intro__stats {
+                        @include flex(row, flex-start, null, null, 40px);
+
+                        @media (max-width: 1000px) {
+                            @include flex(row, center, null, null, 40px);
+                        }
+
+                        .stat {
+                            @include flex(column, flex-start, null, null, 20px);
+
+                            h3 {
+                                font-weight: 500;
+                                font-family: $head-font;
+                                font-size: map-get($font-size, font-lg);
+                            }
+
+                            p {
+                                font-weight: 300;
+                            }
                         }
                     }
                 }
