@@ -639,9 +639,99 @@ a:hover {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 60px;
+}
+.two .main-items .filters {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .two .main-items .filters h1 {
   font-size: 40px;
+}
+.two .main-items .filters .cut {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  border-bottom: 1px solid gray;
+  padding: 40px 0;
+}
+.two .main-items .filters .cut h3 {
+  font-size: 24px;
+}
+.two .main-items .filters .cut .search-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 18px;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 20px;
+}
+.two .main-items .filters .cut .search-box input {
+  border: none;
+  padding: 10px;
+  width: 250px;
+}
+.two .main-items .filters .cut .search-box input::-moz-placeholder {
+  font-size: 16px;
+}
+.two .main-items .filters .cut .search-box input::placeholder {
+  font-size: 16px;
+}
+.two .main-items .filters .cut .checkbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+}
+.two .main-items .filters .cut .checkbox .check {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+.two .main-items .filters .cut .checkbox .check input[type=checkbox] {
+  border: none;
+  width: 20px;
+  height: 20px;
+}
+.two .main-items .filters .cut .checkbox .check label {
+  font-size: 18px;
+}
+.two .main-items .filters .cut .range {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+.two .main-items .filters .cut .range .min-max {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.two .main-items .filters .cut .range .min-max .min,
+.two .main-items .filters .cut .range .min-max .max {
+  border: 1px solid gray;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.two .main-items .filters .cut .range .min-max .min input,
+.two .main-items .filters .cut .range .min-max .max input {
+  width: 60px;
+  border: none;
+  padding: 8px;
+}
+.two .main-items .filters .cut .range button {
+  width: 180px;
 }
 .two .main-items .items {
   display: flex;

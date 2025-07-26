@@ -2,11 +2,86 @@
     margin: 100px 0;
 
     .main-items {
-        @include flex(row, space-between, flex-start, null, null);
+        @include flex(row, space-between, flex-start, null, 60px);
 
         .filters {
+            @include flex(column, null, null, null, 20px);
+
             h1 {
                 font-size: map-get($font-size, font-xl);
+            }
+
+            .cut {
+                @include flex(column, center, flex-start, null, 40px);
+                border-bottom: 1px solid map-get($colors, gray);
+                padding: 40px 0;
+
+                h3 {
+                    font-size: map-get($font-size, font-lg);
+
+                }
+
+                .search-box {
+                    @include flex(row, space-between, center, null, null);
+                    padding: 3px 18px;
+                    background-color: map-get($colors, white);
+                    border: 1px solid map-get($colors, gray);
+                    border-radius: 20px;
+                    
+
+                    input {
+                        border: none;
+                        padding: 10px;
+                        width: 250px;
+
+                        &::placeholder {
+                            font-size: map-get($font-size, font-sm);
+                        }
+                    }
+                }
+
+                .checkbox {
+                    @include flex(column, center, flex-start, null, 15px);
+
+                    .check {
+                        @include flex(row, flex-start, center, null, 8px);
+
+                        input[type="checkbox"] {
+                            border: none;
+                            width: 20px;
+                            height: 20px;
+                        }
+
+                        label {
+                            font-size: map-get($font-size, font-md);
+                        }
+                    }
+                }
+
+                .range {
+                    @include flex(row, space-between, center, null, 14px);
+
+                    .min-max {
+                        @include flex(row, space-between, center, null, 5px);
+
+                        .min,
+                        .max {
+                            border: 1px solid map-get($colors, gray);
+                            border-radius: 10px;
+                            overflow: hidden;
+                            input {
+                                width: 60px;
+                                border: none;
+                                padding: 8px;
+                            }
+                        }
+
+                        p {}
+                    }
+                    button {
+                        width: 180px;
+                    }
+                }
             }
         }
 
