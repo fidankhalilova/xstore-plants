@@ -1122,4 +1122,29 @@ a:hover {
   font-weight: 300;
   color: rgb(41, 66, 51);
   line-height: 28px;
+}
+
+.related-products {
+  margin: 100px 0;
+}
+.related-products .related-prods {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+.related-products .related-prods h1 {
+  font-size: 40px;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+  text-align: center;
+}
+.related-products .related-prods .post-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
 }/*# sourceMappingURL=style.css.map */
