@@ -206,6 +206,7 @@
             #earlier {
                 color: map-get($colors, gray);
                 font-size: map-get($font-size, font-md);
+                text-decoration: line-through;
             }
 
             #now {
