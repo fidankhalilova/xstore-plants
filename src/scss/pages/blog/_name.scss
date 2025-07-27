@@ -1,0 +1,41 @@
+.name {
+    .back-img {
+        overflow: hidden;
+        position: relative;
+        .green-img {
+            width: 100vw;
+            background-color: map-get($colors, light-green-two);
+            height: 300px;
+            @media (max-width: 1000px) {
+                height: 250px;
+            }
+        }
+        .back-img-text {
+            @include flex(column, center, center, null, 18px);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            h1 {
+                font-family: $head-font;
+                font-size: map-get($font-size, font-xl);
+                color: map-get($colors, black);
+                font-weight: 500;
+
+                @media (max-width: 1000px) {
+                    font-size: map-get($font-size, font-lg);
+                }
+            }
+            p {
+                color: map-get($colors, black);
+                font-weight: 200;
+                font-size: 20px;
+                text-align: center;
+
+                @media (max-width: 1000px) {
+                    font-size: map-get($font-size, font-sm);
+                }
+            }
+        }
+    }
+}
