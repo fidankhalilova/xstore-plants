@@ -96,6 +96,9 @@ body {
 .desktop_nav .navbar .nav-list ul li {
   list-style: none;
 }
+.desktop_nav .navbar .nav-list ul li a {
+  font-size: 18px;
+}
 .desktop_nav .navbar .nav-list ul li a:hover {
   color: rgb(41, 66, 51);
   -webkit-text-decoration: underline 2px rgb(41, 66, 51);
@@ -329,7 +332,6 @@ footer .policy .policy-line .payment img {
 a {
   text-decoration: none;
   color: rgb(17, 17, 17);
-  font-size: 18px;
 }
 a:hover {
   color: rgb(41, 66, 51);
