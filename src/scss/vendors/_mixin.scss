@@ -3,7 +3,8 @@
     $justify: null, 
     $items: null, 
     $wrap: null, 
-    $gap: null) {
+    $gap: null
+    ) {
 
     display: flex;
     flex-direction: $direction;
