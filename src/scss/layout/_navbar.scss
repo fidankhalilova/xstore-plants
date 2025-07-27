@@ -8,12 +8,12 @@
     }
 
     .navbar {
-        padding: 20px;
-        position: sticky;
+        padding-top: 20px;
+        padding-bottom: 20px;
         top: 0;
 
         .logo {
-            @include flex(row, flex-start, center, nowrap, null);
+            @include flex(row, center, center, nowrap, null);
 
             img {
                 width: 166px;
@@ -29,6 +29,7 @@
                     list-style: none;
 
                     a {
+                        font-size: map-get($font-size, font-md);
                         &:hover {
                             color: map-get($colors, green);
                             text-decoration: underline 2px map-get($colors, green);
@@ -40,7 +41,7 @@
         }
 
         .user-panel {
-            @include flex(row, flex-end, center, nowrap, 20px);
+            @include flex(row, center, center, nowrap, 20px);
 
             .cart {
                 @include flex(row, center, center, nowrap, 10px);
@@ -60,6 +61,8 @@
     @media (max-width: 1000px) {
         padding: 20px 10px;
         display: block;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .item {
