@@ -1281,6 +1281,7 @@ a:hover {
   justify-content: space-between;
   align-items: flex-start;
   gap: 60px;
+  margin: 0 120px;
 }
 @media (max-width: 1000px) {
   .two .main-items {
@@ -1408,6 +1409,7 @@ a:hover {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  margin: 0 70px;
 }
 @media (max-width: 1000px) {
   .two .main-items .items .item-show {
@@ -1522,6 +1524,7 @@ a:hover {
   gap: 60px;
   padding-bottom: 60px;
   border-bottom: 1px solid rgb(230, 233, 208);
+  margin: 0 120px;
 }
 @media (max-width: 1000px) {
   .product-main .main-product {
