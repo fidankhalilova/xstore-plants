@@ -5,9 +5,19 @@
 @import "./vendors/extend";
 @import "./components/link";
 @import "./components/button";
+@import "./components/blog-posts";
 @import "./layout/navbar";
 @import "./layout/footer";
 @import "./pages/blog/header";
 @import "./pages/blog/blogs";
+@import "./pages/blog_details/blog-loc";
+@import "./pages/blog_details/blog-section";
+@import "./pages/blog_details/related-items";
+@import "./pages/blog_details/related-articles";
+@import "./pages/blog_details/blog-end";
+@import "./pages/blog_details/author-post";
+@import "./pages/blog_details/comments";
+@import "./pages/blog_details/add-comment";
+@import "./pages/blog_details/next-article";
 
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap');

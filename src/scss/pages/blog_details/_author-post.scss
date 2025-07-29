@@ -1,0 +1,46 @@
+.author-post {
+    margin: 60px 124px;
+
+    .author-quote {
+        @include flex(column, center, flex-start, null, 40px);
+
+        .sub-head {
+            h1 {
+                font-size: map-get($font-size, font-xl);
+                font-family: $head-font;
+                font-weight: 500;
+                text-align: left;
+                letter-spacing: 1.2px;
+            }
+        }
+
+        .post-by {
+            padding: 40px 44px;
+            background-color: map-get($colors, light-green-two);
+            @include flex(row, center, center, null, 40px);
+
+            .author-img {
+                img {
+                    width: 64px;
+                    height: 64px;
+                    object-fit: cover;
+                    border-radius: 100px;
+                }
+            }
+
+            .author-desc {
+                @include flex(column, center, flex-start, null, 20px);
+                h2 {
+                    font-size: map-get($font-size, font-lg);
+                    font-weight: 500;
+                }
+
+                p {
+                    font-size: map-get($font-size, font-md);
+                    line-height: 30px;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}

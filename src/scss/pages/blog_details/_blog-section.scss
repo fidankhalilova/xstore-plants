@@ -1,0 +1,121 @@
+.blog-main {
+    margin: 80px 124px;
+
+    .blog-content {
+        @include flex(column, center, flex-start, null, 50px);
+
+        .heading {
+            width: 987px;
+
+            h1 {
+                font-size: map-get($font-size, font-xl);
+                font-family: $head-font;
+                font-weight: 500;
+                text-align: left;
+                letter-spacing: 1.2px;
+                line-height: 44px;
+            }
+        }
+
+        .tags {
+            @include flex(row, center, center, null, 348px);
+
+            .info-line {
+                @include flex(row, center, center, nowrap, 16px);
+
+                #tags {
+                    background-color: map-get($colors, light-green-two);
+                    border-radius: 20px;
+                    padding: 12px;
+                    font-size: map-get($font-size, font-md);
+                }
+
+                #dates {
+                    font-size: map-get($font-size, font-md);
+                }
+
+                #comments {
+                    font-size: map-get($font-size, font-md);
+                }
+            }
+
+            .who-shared {
+                @include flex(row, center, center, nowrap, 10px);
+
+                .image {
+                    img {
+                        width: 64px;
+                        height: 64px;
+                        object-fit: cover;
+                        border-radius: 100px;
+                    }
+                }
+
+                h3 {
+                    font-size: map-get($font-size, font-md);
+                }
+            }
+        }
+
+        .blog-img {
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .overview {
+            @include flex(column, center, flex-start, null, 20px);
+
+            h4 {
+                font-size: map-get($font-size, font-lg);
+                font-weight: 400;
+                line-height: 32px;
+            }
+
+            h5 {
+                font-size: map-get($font-size, font-md);
+                font-weight: 300;
+                color: map-get($colors, green);
+                line-height: 32px;
+            }
+        }
+
+        .plant-needs {
+            @include flex(column, center, flex-start, null, 40px);
+            h1 {
+                font-size: map-get($font-size, font-xl);
+                font-family: $head-font;
+                font-weight: 500;
+                text-align: left;
+                letter-spacing: 1.2px;
+            }
+
+            .in-line {
+                @include flex(row, center, flex-start, null, 20px);
+
+                #heads {
+                    margin-left: 20px;
+                    width: 400px;
+                    @include flex(column, center, flex-start, null, 50px);
+                    li {
+                        font-size: map-get($font-size, font-md);
+                        font-weight: 500;
+                        line-height: 30px;
+                        list-style: square;
+                    }
+                }
+
+                #decs {
+                    @include flex(column, center, flex-start, null, 20px);
+                    li {
+                        font-size: map-get($font-size, font-md);
+                        font-weight: 300;
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
