@@ -1,0 +1,70 @@
+.add-comment {
+    margin: 80px 124px;
+
+    .comment-form {
+        @include flex(column, center, flex-start, null, 40px);
+
+
+        .sub-head {
+            h1 {
+                font-size: map-get($font-size, font-xl);
+                font-family: $head-font;
+                font-weight: 500;
+                text-align: left;
+                letter-spacing: 1.2px;
+            }
+        }
+
+        .form {
+            @include flex(column, center, flex-start, null, 30px);
+            width: 100%;
+
+            p {
+                font-size: map-get($font-size, font-md);
+                color: map-get($colors, black);
+                line-height: 30px;
+            }
+
+            textarea {
+                padding: 20px;
+                border: none;
+                border: 1px solid map-get($colors, gray);
+                width: 100%;
+                height: 200px;
+
+                &::placeholder {
+                    color: map-get($colors, gray);
+                    font-family: $base-font;
+                }
+            }
+
+            .line-form {
+                @include flex(row, center, center, null, 40px);
+                width: 100%;
+
+                input {
+                    padding: 20px;
+                    border: none;
+                    border: 1px solid map-get($colors, gray);
+                    width: 100%;
+                }
+            }
+            .save-settings {
+                @include flex(row, center, center, null, 10px);
+                input {
+                    font-size: map-get($font-size, font-lg);
+                }
+                label {
+                    color: map-get($colors, green);
+                    font-weight: 300;
+                    font-family: $base-font;
+                    font-size: map-get($font-size, font-md);
+                }
+            }
+            .btn {
+                @include flex(row, center, center, null, null);
+                height: 50px;
+            }
+        }
+    }
+}

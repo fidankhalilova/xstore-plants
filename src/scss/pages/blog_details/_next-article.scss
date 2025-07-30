@@ -1,0 +1,78 @@
+.next-articles {
+    margin: 80px 124px;
+
+    .switch {
+        @include flex(row, center, center, null, 60px);
+        width: 100%;
+        padding: 40px 60px;
+        border: 1px solid map-get($colors, black);
+        background-color: map-get($colors, white);
+
+        .blog-btn {
+            p {
+                i {
+                    font-size: map-get($font-size, font-xl);
+                }
+            }
+        }
+
+        .prev {
+            @include flex(row, center, center, null, 20px);
+            
+            &:hover {
+                transform: translate(-10px, 0px);
+                transition: transform 0.5s ease-in-out;
+            }
+
+            .arrow {
+                i {
+                    font-size: map-get($font-size, font-lg);
+                }
+            }
+
+            .previous {
+                @include flex(column, center, flex-start, null, 20px);
+
+                h5 {
+                    color: map-get($colors, gray);
+                    font-size: map-get($font-size, font-md);
+                }
+
+                h2 {
+                    color: map-get($colors, black);
+                    font-size: map-get($font-size, font-lg);
+                }
+            }
+        }
+
+        .after {
+            @include flex(row, center, center, null, 20px);
+            
+            &:hover {
+                transform: translate(10px, 0px);
+                transition: transform 0.5s ease-in-out;
+            }
+
+            .arrow {
+                i {
+                    font-size: map-get($font-size, font-lg);
+                }
+            }
+
+            .next {
+                @include flex(column, center, flex-end, null, 20px);
+
+                h5 {
+                    color: map-get($colors, gray);
+                    font-size: map-get($font-size, font-md);
+                }
+
+                h2 {
+                    color: map-get($colors, black);
+                    font-size: map-get($font-size, font-lg);
+                    text-align: end;
+                }
+            }
+        }
+    }
+}
