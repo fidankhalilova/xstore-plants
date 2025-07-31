@@ -1543,9 +1543,12 @@ footer .policy .policy-line .payment img {
   }
 }
 .one .back-img .back-img-text p {
-  color: rgb(17, 17, 17);
+  color: white;
   font-size: 18px;
   text-align: center;
+}
+.one .back-img .back-img-text p a {
+  color: white;
 }
 
 .two {

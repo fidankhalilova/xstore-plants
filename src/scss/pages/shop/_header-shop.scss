@@ -28,9 +28,12 @@
                 }
             }
             p {
-                color: map-get($colors, black);
+                color: map-get($colors, white);
                 font-size: map-get($font-size, font-md);
                 text-align: center;
+                a {
+                    color: map-get($colors, white);
+                }
             }
         }
     }
