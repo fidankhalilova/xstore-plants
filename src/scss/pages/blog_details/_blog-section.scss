@@ -1,0 +1,195 @@
+.blog-main {
+    margin: 80px 124px;
+
+    @media (max-width: 1000px) {
+        margin: 40px 0px;
+    }
+
+    .blog-content {
+        @include flex(column, center, flex-start, wrap, 40px);
+        width: 100%;
+
+        .heading {
+            width: 987px;
+
+            @media (max-width: 1000px) {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: map-get($font-size, font-xl);
+                font-family: $head-font;
+                font-weight: 500;
+                text-align: left;
+                letter-spacing: 1.2px;
+                line-height: 44px;
+
+                @media (max-width: 1000px) {
+                    font-size: map-get($font-size, font-lg);
+                }
+            }
+        }
+
+        .tags {
+            @include flex(row, center, center, null, 348px);
+
+            @media (max-width: 1000px) {
+                @include flex(column, center, flex-start, wrap, 40px);
+                width: 100%;
+            }
+
+            .info-line {
+                @include flex(row, center, center, nowrap, 16px);
+
+                @media (max-width: 1000px) {
+                    @include flex(column, center, flex-start, wrap, 30px);
+                }
+
+                #tags {
+                    background-color: map-get($colors, light-green-two);
+                    border-radius: 20px;
+                    padding: 12px;
+                    font-size: map-get($font-size, font-md);
+
+                    @media (max-width: 1000px) {
+                        width: 100%;
+                        line-height: 30px;
+                    }
+                }
+
+                #dates {
+                    font-size: map-get($font-size, font-md);
+                }
+
+                #comments {
+                    font-size: map-get($font-size, font-md);
+                }
+            }
+
+            .who-shared {
+                @include flex(row, center, center, nowrap, 10px);
+
+                .image {
+                    img {
+                        width: 64px;
+                        height: 64px;
+                        object-fit: cover;
+                        border-radius: 100px;
+                    }
+                }
+
+                h3 {
+                    font-size: map-get($font-size, font-md);
+                }
+            }
+        }
+
+        .blog-img {
+            @include flex(row, center, center, null, null);
+
+            @media (max-width: 1000px) {
+                @include flex(column, center, center, wrap, null);
+                width: 100%;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .overview {
+            @include flex(column, center, flex-start, null, 20px);
+
+            @media (max-width: 1000px) {
+                @include flex(column, center, flex-start, wrap, 10px);
+            }
+
+            h4 {
+                font-size: map-get($font-size, font-lg);
+                font-weight: 400;
+                line-height: 32px;
+
+                @media (max-width: 1000px) {
+                    font-size: map-get($font-size, font-md);
+                }
+            }
+
+            h5 {
+                font-size: map-get($font-size, font-md);
+                font-weight: 300;
+                color: map-get($colors, green);
+                line-height: 32px;
+
+                @media (max-width: 1000px) {
+                    font-size: map-get($font-size, font-sm);
+                }
+            }
+        }
+
+        .plant-needs {
+            @include flex(column, center, flex-start, null, 40px);
+
+            @media (max-width: 1000px) {
+                @include flex(column, center, flex-start, wrap, 20px);
+                width: 100%;
+            }
+
+            h1 {
+                font-size: map-get($font-size, font-xl);
+                font-family: $head-font;
+                font-weight: 500;
+                text-align: left;
+                letter-spacing: 1.2px;
+
+                @media (max-width: 1000px) {
+                    font-size: map-get($font-size, font-lg);
+                    line-height: 32px;
+                    width: 100%;
+                }
+            }
+
+            .in-line {
+                @include flex(row, center, flex-start, null, 20px);
+
+                @media (max-width: 1000px) {
+                    @include flex(column, null, null, wrap, 40px);
+                    width: 100%;
+                }
+
+                #heads {
+                    margin-left: 20px;
+                    width: 400px;
+                    @include flex(column, center, flex-start, null, 50px);
+
+                    @media (max-width: 1000px) {
+                        @include flex(column, center, flex-start, null, 30px);
+                        width: 100%;
+                    }
+
+                    li {
+                        font-size: map-get($font-size, font-md);
+                        font-weight: 500;
+                        line-height: 30px;
+                        list-style: square;
+                    }
+                }
+
+                #decs {
+                    @include flex(column, center, flex-start, null, 20px);
+
+                    @media (max-width: 1000px) {
+                        width: 100%;
+                    }
+
+                    li {
+                        font-size: map-get($font-size, font-md);
+                        font-weight: 300;
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.fifth {
+    margin: 100px 0;
+
+    .deal-of-the-month {
+        @include flex(row, center, center, wrap, 40px);
+
+        .sub-head {
+            h2 {
+                font-size: map-get($font-size, font-xl);
+                font-family: $head-font;
+                font-weight: 500;
+                text-align: center;
+            }
+        }
+
+        .products {
+            .main-product {
+                @include flex(column, null, center, null, 30px);
+
+                .image-full {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                h3 {
+                    font-size: map-get($font-size, font-lg);
+                    font-family: $head-font;
+                    font-weight: 500;
+                    text-align: center;
+                    letter-spacing: 0.8px;
+                }
+
+                p {
+                    font-size: map-get($font-size, font-md);
+                    font-weight: 300;
+                    text-align: center;
+                    line-height: 24px;
+                    letter-spacing: 0.8px;
+                }
+
+                button {
+                    width: 100%;
+                }
+            }
+
+            .posts-deals {
+                @include flex(column, center, center, nowrap, 40px);
+                .post-row {
+                    @include flex(row, center, center, nowrap, 40px);
+                }
+            }
+        }
+    }
+}

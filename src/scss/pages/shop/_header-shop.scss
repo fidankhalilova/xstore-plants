@@ -1,0 +1,37 @@
+.one {
+    .back-img {
+        overflow: hidden;
+        position: relative;
+        img {
+            width: 100vw;
+            height: 300px;
+            object-fit: cover;
+            background-color: map-get($colors, light-green-two);
+            @media (max-width: 1000px) {
+                height: 250px;
+            }
+        }
+        .back-img-text {
+            @include flex(column, center, center, null, 15px);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            h1 {
+                font-family: $head-font;
+                font-size: map-get($font-size, font-xl);
+                color: map-get($colors, white);
+                font-weight: 500;
+                text-align: center;
+                @media (max-width: 1000px) {
+                    font-size: map-get($font-size, font-lg);
+                }
+            }
+            p {
+                color: map-get($colors, black);
+                font-size: map-get($font-size, font-md);
+                text-align: center;
+            }
+        }
+    }
+}

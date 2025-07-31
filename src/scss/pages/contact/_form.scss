@@ -1,0 +1,175 @@
+.get-in-touch {
+    margin: 100px 120px;
+
+    @media (max-width: 1000px) {
+        margin: 60px 0;
+    }
+
+    .contact-info {
+        @include flex(row, space-between, center, wrap, null);
+
+        @media (max-width: 1000px) {
+            @include flex(column, center, null, null, 30px);
+        }
+
+        .form-part {
+            @include flex(column, null, null, null, 30px);
+
+            .form-head {
+                @include flex(column, center, null, null, 20px);
+
+                h1 {
+                    font-size: map-get($font-size, font-xl);
+                    font-family: $head-font;
+                    font-weight: 500;
+
+                    @media (max-width: 1000px) {
+                        font-size: map-get($font-size, font-lg);
+                    }
+                }
+
+                p {
+                    font-size: map-get($font-size, font-md);
+                    color: map-get($colors, green);
+                    font-weight: 300;
+                    line-height: 36px;
+                }
+            }
+
+            .contact-form {
+                @include flex(column, center, null, null, 25px);
+
+                .form-row {
+                    @include flex(row, null, center, null, 30px);
+                    width: 100%;
+
+                    @media (max-width: 1000px) {
+                        @include flex(column, center, null, null, 30px);
+                    }
+
+                    .input {
+                        @include flex(column, center, null, null, 10px);
+                        width: 100%;
+
+                        label {
+                            font-size: map-get($font-size, font-md);
+                            color: map-get($colors, green);
+                            font-weight: 300;
+
+                            span {
+                                color: red;
+                            }
+                        }
+
+                        input {
+                            width: 100%;
+                            padding: 20px;
+                            border: none;
+                            border-radius: 30px;
+                        }
+                    }
+                }
+
+                .input {
+                    @include flex(column, center, null, null, 10px);
+
+                    label {
+                        font-size: map-get($font-size, font-md);
+                        color: map-get($colors, green);
+                        font-weight: 300;
+
+                        span {
+                            color: red;
+                        }
+                    }
+
+                    input {
+                        width: 100%;
+                        padding: 20px;
+                        border: none;
+                        border-radius: 30px;
+                    }
+
+                    textarea {
+                        width: 100%;
+                        padding: 20px;
+                        border: none;
+                        border-radius: 20px;
+                        height: 150px;
+                    }
+                }
+
+                button {
+                    width: 250px;
+                    @include flex(row, center, center, null, null);
+                    height: 50px;
+                    margin-top: 20px;
+
+                    @media (max-width: 1000px) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .info-cards {
+            @include flex(column, center, null, null, 30px);
+
+            .info-one {
+                @include flex(column, center, null, null, 20px);
+                padding: 40px;
+                background-color: map-get($colors, light-green-two);
+
+                h3 {
+                    font-size: map-get($font-size, font-lg);
+                    font-family: $head-font;
+                    font-weight: 500;
+                }
+
+                p {
+                    font-size: map-get($font-size, font-sm);
+                    color: map-get($colors, green);
+                    font-weight: 300;
+                    line-height: 36px;
+                }
+
+                button {
+                    @include flex(row, center, center, null, null);
+                    width: 100%;
+                    height: 30px;
+                }
+            }
+
+            .info-two {
+                @include flex(column, center, null, null, 10px);
+                padding: 40px;
+                background-color: map-get($colors, green);
+                color: map-get($colors, white);
+
+                h3 {
+                    font-size: map-get($font-size, font-lg);
+                    font-family: $head-font;
+                    font-weight: 500;
+                }
+
+                p {
+                    font-size: map-get($font-size, font-md);
+                    font-weight: 300;
+                    line-height: 36px;
+                    margin-top: 10px;
+                }
+
+                ul {
+                    line-height: 26px;
+                }
+
+                button {
+                    @include flex(row, center, center, null, null);
+                    width: 100%;
+                    height: 30px;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

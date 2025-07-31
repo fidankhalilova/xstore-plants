@@ -1,0 +1,31 @@
+.related-products {
+    margin: 60px 120px;
+
+    @media (max-width: 1000px) {
+        margin: 60px 0px;
+    }
+
+    .related-prods {
+        @include flex(column, null, null, null, 80px);
+
+        @media (max-width: 1000px) {
+            @include flex(column, null, null, null, 40px);
+            width: 100%;
+        }
+
+        h1 {
+            font-size: map-get($font-size, font-xl);
+            font-family: $head-font;
+            font-weight: 500;
+            text-align: left;
+
+            @media (max-width: 1000px) {
+                font-size: map-get($font-size, font-lg);
+            }
+        }
+
+        .post-row {
+            @include flex(row, center, center, wrap, 56px);
+        }
+    }
+}
