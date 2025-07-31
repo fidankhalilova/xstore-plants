@@ -1,0 +1,41 @@
+.our-goals {
+    margin: 80px 124px;
+
+    @media (max-width: 1000px) {
+        margin: 40px 0;
+    }
+
+    .our-goals-row {
+        @include flex(row, space-between, center, wrap, null);
+
+        @media (max-width: 1000px) {
+            @include flex(column, center, center, nowrap, 30px);
+        }
+
+        .our-goal {
+            @include flex(column, center, center, nowrap, 20px);
+            width: 400px;
+
+            .one {
+                width: 160px;
+                height: 200px;
+                object-fit: cover;
+            }
+
+            h2 {
+                font-family: $head-font;
+                font-weight: 500;
+                font-size: map-get($font-size, font-lg);
+                text-align: center;
+            }
+
+            p {
+                font-size: map-get($font-size, font-md);
+                color: map-get($colors, green);
+                font-weight: 300;
+                text-align: center;
+                line-height: 30px;
+            }
+        }
+    }
+}

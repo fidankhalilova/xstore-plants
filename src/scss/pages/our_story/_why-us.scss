@@ -1,0 +1,92 @@
+.why-us {
+    margin: 60px 0;
+
+    @media (max-width: 1000px) {
+        margin: 40px 0;
+    }
+
+    .why-xstore {
+        @include flex(row, space-between, center, nowrap, null);
+        width: 100%;
+        padding: 178px 0;
+
+        @media (max-width: 1000px) {
+            @include flex(column, center, center, nowrap, null);
+        }
+
+        .planter-img {
+
+            @media (max-width: 1000px) {
+                width: 100%;
+            }
+
+            img {
+                width: 840px;
+                height: 600px;
+                object-fit: cover;
+
+                @media (max-width: 1000px) {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .why-xstore-text {
+            @include flex(column, center, center, nowrap, 20px);
+            background-color: map-get($colors, light-green-two);
+            width: 100%;
+            padding: 178px 90px;
+
+            @media (max-width: 1000px) {
+                width: 100%;
+                @include flex(column, center, center, nowrap, null);
+                padding: 100px 50px;
+            }
+
+            .text-box {
+                @include flex(column, center, flex-start, nowrap, 20px);
+                background-color: map-get($colors, light-green-two);
+                width: 100%;
+
+                h1 {
+                    font-family: $head-font;
+                    font-weight: 500;
+                    font-size: map-get($font-size, font-xl);
+                    line-height: 44px;
+
+                    @media (max-width: 1000px) {
+                        width: 100%;
+                    }
+                }
+
+                p {
+                    font-size: map-get($font-size, font-md);
+                    color: map-get($colors, green);
+                    font-weight: 300;
+                    line-height: 30px;
+                    width: 600px;
+
+                    @media (max-width: 1000px) {
+                        width: 100%;
+                    }
+                }
+
+                .btns {
+                    @include flex(row, flex-start, null, nowrap, 16px);
+
+
+                    @media (max-width: 1000px) {
+                        width: 100%;
+                        @include flex(column, center, center, null, null);
+                    }
+
+                    .btn {
+                        height: 50px;
+                        @include flex(row, center, center, null, null);
+                    }
+                }
+            }
+        }
+    }
+}
