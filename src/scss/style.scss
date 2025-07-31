@@ -5,10 +5,10 @@
 @import "./vendors/extend";
 @import "./components/link";
 @import "./components/button";
-@import "./components/post";
-@import "./components/blog-posts";
 @import "./layout/navbar";
 @import "./layout/footer";
+@import "./components/post";
+@import "./components/blog-posts";
 @import "./pages/home/intro";
 @import "./pages/home/populars";
 @import "./pages/home/compare";
@@ -36,5 +36,11 @@
 @import "./pages/blog_details/comments";
 @import "./pages/blog_details/add-comment";
 @import "./pages/blog_details/next-article";
+@import "./pages/our_story/heading-story";
+@import "./pages/our_story/our-goals";
+@import "./pages/our_story/our-slogans";
+@import "./pages/our_story/why-us";
+@import "./pages/our_story/follow-us";
+@import "./pages/our_story/logos";
 
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap');
