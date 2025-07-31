@@ -1,0 +1,17 @@
+.logos {
+    .desktop-logos {
+        margin: 60px 124px;
+        @include flex(row, space-between, center, nowrap, null);
+
+        @media (max-width: 1000px) {
+            display: none;
+        }
+    }
+    .mobile-logos {
+        display: none;
+        @media (max-width: 1000px) {
+            @include flex(row, center, center, nowrap, null);
+            margin: 20px 0;
+        }
+    }
+}
