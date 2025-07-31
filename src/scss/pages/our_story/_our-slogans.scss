@@ -1,0 +1,66 @@
+.our-slogan {
+    margin: 120px 124px;
+
+    @media (max-width: 1000px) {
+        margin: 60px 0;
+    }
+
+    .slogans {
+        @include flex(row, center, center, nowrap, 10px);
+
+        @media (max-width: 1000px) {
+            @include flex(column, center, center, nowrap, 40px);
+            width: 100%;
+        }
+
+        .slogan-one {
+            @include flex(column, center, flex-start, wrap, 30px);
+
+            @media (max-width: 1000px) {
+                @include flex(column, center, center, nowrap, 30px);
+                width: 100%;
+            }
+
+            h1 {
+                font-family: $head-font;
+                font-weight: 500;
+                font-size: map-get($font-size, font-xl);
+                line-height: 44px;
+            }
+
+            p {
+                font-size: map-get($font-size, font-md);
+                color: map-get($colors, green);
+                font-weight: 300;
+                line-height: 30px;
+                width: 600px;
+
+                @media (max-width: 1000px) {
+                    width: 100%;
+                }
+            }
+
+            img {
+                @media (max-width: 1000px) {
+                    width: 100%;
+                }
+            }
+        }
+
+        .slogan-two {
+            @media (max-width: 1000px) {
+                @include flex(column, center, center, nowrap, 30px);
+                width: 100%;
+            }
+
+            img {
+                @media (max-width: 1000px) {
+                    width: 100%;
+                }
+                width: 600px;
+                height: 600px;
+                object-fit: cover;
+            }
+        }
+    }
+}
