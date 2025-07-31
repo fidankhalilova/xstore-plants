@@ -1,8 +1,16 @@
 .add-comment {
     margin: 80px 124px;
 
+    @media (max-width: 1000px) {
+        margin: 60px 0px;
+    }
+
     .comment-form {
         @include flex(column, center, flex-start, null, 40px);
+
+        @media (max-width: 1000px) {
+            @include flex(column, center, flex-start, wrap, 20px);
+        }
 
 
         .sub-head {
@@ -42,6 +50,10 @@
                 @include flex(row, center, center, null, 40px);
                 width: 100%;
 
+                @media (max-width: 1000px) {
+                    @include flex(column, center, flex-start, wrap, 20px);
+                }
+
                 input {
                     padding: 20px;
                     border: none;
@@ -49,11 +61,14 @@
                     width: 100%;
                 }
             }
+
             .save-settings {
                 @include flex(row, center, center, null, 10px);
+
                 input {
                     font-size: map-get($font-size, font-lg);
                 }
+
                 label {
                     color: map-get($colors, green);
                     font-weight: 300;
@@ -61,6 +76,7 @@
                     font-size: map-get($font-size, font-md);
                 }
             }
+
             .btn {
                 @include flex(row, center, center, null, null);
                 height: 50px;
