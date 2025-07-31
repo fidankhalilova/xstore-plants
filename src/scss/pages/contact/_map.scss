@@ -1,0 +1,17 @@
+.map {
+    width: 100%;
+
+    .map-img {
+        @include flex(row, center, center, null, null);
+
+        img {
+            width: 1410px;
+            height: 500px;
+
+            @media (max-width: 1000px) {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
