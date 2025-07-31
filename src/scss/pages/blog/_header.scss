@@ -4,23 +4,15 @@
         position: relative;
         img {
             width: 100vw;
-<<<<<<<< HEAD:src/scss/pages/blog/_header.scss
             height: 300px;
             object-fit: cover;
             background-color: map-get($colors, light-green-two);
-========
-            object-fit: cover;
->>>>>>>> main:src/scss/pages/shop/_header.scss
             @media (max-width: 1000px) {
                 height: 250px;
             }
         }
         .back-img-text {
-<<<<<<<< HEAD:src/scss/pages/blog/_header.scss
             @include flex(column, center, center, null, 15px);
-========
-            @include flex(column, center, center, null, 10px);
->>>>>>>> main:src/scss/pages/shop/_header.scss
             position: absolute;
             height: 100%;
             width: 100%;
@@ -30,25 +22,15 @@
                 font-size: map-get($font-size, font-xl);
                 color: map-get($colors, white);
                 font-weight: 500;
-<<<<<<<< HEAD:src/scss/pages/blog/_header.scss
                 text-align: center;
-========
->>>>>>>> main:src/scss/pages/shop/_header.scss
                 @media (max-width: 1000px) {
                     font-size: map-get($font-size, font-lg);
                 }
             }
             p {
-<<<<<<<< HEAD:src/scss/pages/blog/_header.scss
                 color: map-get($colors, black);
                 font-size: map-get($font-size, font-md);
                 text-align: center;
-========
-                color: map-get($colors, white);
-                a {
-                    color: map-get($colors, white);
-                }
->>>>>>>> main:src/scss/pages/shop/_header.scss
             }
         }
     }

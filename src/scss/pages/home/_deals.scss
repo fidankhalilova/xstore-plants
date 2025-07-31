@@ -45,7 +45,10 @@
             }
 
             .posts-deals {
-                @include flex(row, center, flex-start, wrap, 40px);
+                @include flex(column, center, center, nowrap, 40px);
+                .post-row {
+                    @include flex(row, center, center, nowrap, 40px);
+                }
             }
         }
     }
