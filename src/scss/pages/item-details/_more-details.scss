@@ -1,5 +1,10 @@
 // by Fidan Khalilova
 .more-details {
+    margin: 20px 124px;
+    @media (max-width: 1000px) {
+        margin: 20px 0;
+    }
+
     .more-about {
         @include flex(column, space-between, center, null, 80px);
         padding-bottom: 60px;

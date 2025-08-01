@@ -1,6 +1,10 @@
 // by Fidan Khalilova
 .third {
-    padding: 100px 0;
+    margin: 100px 124px;
+
+    @media (max-width: 1000px) {
+        margin: 80px 0;
+    }
 
     .before-and-after {
         @include flex(column, center, center, null, 40px);

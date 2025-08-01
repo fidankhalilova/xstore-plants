@@ -73,7 +73,39 @@
                                     alt="">
                             </div>
                             <div class="hamburger">
-                                <a href="#"><i class="ri-menu-line"></i></a>
+                                <i class="ri-menu-line" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"></i>
+
+                                <div class="offcanvas offcanvas-start w-100" data-bs-scroll="true"
+                                    data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling"
+                                    aria-labelledby="offcanvasScrollingLabel">
+                                    <div class="offcanvas-header">
+                                        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Navigation bar</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="offcanvas-body">
+                                        <ul class="mobile-nav-list">
+                                            <li>
+                                                <a href="../public/index.html"><button class="btn">Home</button></a>
+                                            </li>
+                                            <li>
+                                                <a href="../public/our_story.html"><button class="btn">Our
+                                                        Story</button></a>
+                                            </li>
+                                            <li>
+                                                <a href="../public/shop.html"><button class="btn">Products</button></a>
+                                            </li>
+                                            <li>
+                                                <a href="../public/blog.html"><button class="btn">Blog</button></a>
+                                            </li>
+                                            <li>
+                                                <a href="../public/contact.html"><button
+                                                        class="btn">Contacts</button></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

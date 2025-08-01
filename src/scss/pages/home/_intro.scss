@@ -15,6 +15,7 @@
 
                 .intro-inner {
                     @include flex(column, center, null, nowrap, 50px);
+
                     .intro__head {
                         h1 {
                             font-size: map-get($font-size, font-xl);
@@ -40,8 +41,17 @@
 
                             }
 
-                            button {
+                            a {
                                 width: 100%;
+
+                                button {
+                                    width: 100%;
+                                    color: map-get($colors, black);
+
+                                    &:hover {
+                                        color: map-get($colors, white);
+                                    }
+                                }
                             }
                         }
                     }

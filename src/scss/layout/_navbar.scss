@@ -68,4 +68,21 @@
     .item {
         @include flex(row, space-between, center, null, null);
     }
+
+    .offcanvas-header {
+        background-color: map-get($colors, light-green-two);
+        h5 {
+            font-size: map-get($font-size, font-lg);
+            font-family: $head-font;
+        }
+    }
+
+    .offcanvas-body {
+        background-color: map-get($colors, light-green-one);
+
+        .mobile-nav-list {
+            margin-top: 20px;
+            @include flex(column, center, center, null, 20px);
+        }
+    }
 }

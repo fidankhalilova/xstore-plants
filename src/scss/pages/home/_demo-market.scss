@@ -1,6 +1,11 @@
 // by Fidan Khalilova
 .eight {
-    margin: 40px 0;
+    margin: 40px 124px;
+
+    @media (max-width: 1000px) {
+        margin: 40px 0;
+    }
+
     .demo-store {
         @include flex(row, center, center, null, 60px);
         @media (max-width: 1200px) {

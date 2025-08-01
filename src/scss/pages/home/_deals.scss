@@ -1,9 +1,13 @@
 // by Fidan Khalilova
 .fifth {
-    margin: 100px 0;
+    margin: 100px 124px;
+
+    @media (max-width: 1000px) {
+        margin: 80px 0;
+    }
 
     .deal-of-the-month {
-        @include flex(row, center, center, wrap, 40px);
+        @include flex(row, center, center, wrap, 50px);
 
         .sub-head {
             h2 {
