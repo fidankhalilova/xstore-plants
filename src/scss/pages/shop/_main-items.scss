@@ -12,6 +12,7 @@
 
         @media (max-width: 1000px) {
             @include flex(column, center, null, nowrap, 30px);
+            margin: 0;
         }
 
         .filters-desktop {
@@ -106,10 +107,10 @@
         .filters-mobile {
             display: none;
 
-            // @media (max-width: 1000px) {
-            //     @include flex(row, flex-start, center, nowrap, null);
-            //     font-size: map-get($font-size, font-lg);
-            // }
+            @media (max-width: 1000px) {
+                @include flex(row, flex-start, center, nowrap, null);
+                font-size: map-get($font-size, font-lg);
+            }
         }
 
         .items {
@@ -117,7 +118,7 @@
 
             .item-show {
                 @include flex(row, space-between, center, wrap, null);
-                margin: 0 70px;
+                margin: 0 26px;
 
                 @media (max-width: 1000px) {
                     @include flex(row, space-between, center, nowrap, 30px);

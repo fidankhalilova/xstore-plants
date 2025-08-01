@@ -1574,6 +1574,7 @@ footer .policy .policy-line .payment img {
     justify-content: center;
     flex-wrap: nowrap;
     gap: 30px;
+    margin: 0;
   }
 }
 .two .main-items .filters-desktop {
@@ -1679,6 +1680,16 @@ footer .policy .policy-line .payment img {
 .two .main-items .filters-mobile {
   display: none;
 }
+@media (max-width: 1000px) {
+  .two .main-items .filters-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-size: 24px;
+  }
+}
 .two .main-items .items {
   display: flex;
   flex-direction: column;
@@ -1693,7 +1704,7 @@ footer .policy .policy-line .payment img {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin: 0 70px;
+  margin: 0 26px;
 }
 @media (max-width: 1000px) {
   .two .main-items .items .item-show {
